@@ -3,7 +3,7 @@
   <img width="150px;" src="./public/images/readme-logo.svg"/>
 </p>
 <h1 align="middle"></h1>
-<p align="middle">Vanilla JS로 구현 하는 상태관리가 가능한 카페메뉴 앱</p>
+<p align="middle">Vanilla JS로 구현 하는 급여 관리 시스템</p>
 <h1 align="middle"></h1>
 
 <br/>
