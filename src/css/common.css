@@ -1,0 +1,86 @@
+.common-nav {
+  background-color: #2b3f6b;
+  width: 13%;
+  height: 100vh;
+  position: fixed;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.logo {
+  background-image: url('/public/images/logo.svg');
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+.nav-clock {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 30px;
+  padding-right: 25px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-clock span {
+  font-size: 14px;
+  position: absolute;
+  bottom: 25px;
+  right: 70px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+  height: 35px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 10px;
+}
+
+.nav-item__active {
+  background-color: #7b8ea9;
+}
+
+.nav-item a {
+  color: white;
+  font-size: 14px;
+}
+
+.logout {
+  position: absolute;
+  left: 4px;
+  bottom: 10px;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout div {
+  width: 100%;
+  height: 35px;
+  border-radius: 10px;
+  line-height: 20px;
+  color: white;
+}
