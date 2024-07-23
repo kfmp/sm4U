@@ -8,6 +8,40 @@
 
 <br/>
 
+### TEAM MEMBERS
+
+<table align=center>
+    <thead>
+        <tr >
+            <th style="text-align:center;" >송예림</th>
+            <th style="text-align:center;" >황철원</th>
+            <th style="text-align:center;" >김상학</th>
+            <th style="text-align:center;" >노승우</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img width="200" src="https://avatars.githubusercontent.com/u/65770658?v=4" /> </td>
+            <td><img width="200" src="https://avatars.githubusercontent.com/u/82077853?v=4" /></td>
+            <td><img width="200" src="https://avatars.githubusercontent.com/u/129316014?v=4" /></td>
+            <td><img width="200" src=https://avatars.githubusercontent.com/u/175581195?s=200&v=4" /></td>
+        </tr>
+        <tr style="text-align:center;">
+            <td><a href="https://github.com/yerim8373">@yerim8373</a></td>
+            <td><a href="https://github.com/Cheol-Cheol">@Cheol-Cheol</a></td>
+            <td><a href="https://github.com/sanghk32">@sanghk32</a></td>
+            <td><a href="https://github.com/nsw2022">@nsw2022</a></td>
+        </tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<br/>
+
 ### GET STARTED
 
 ```bash
@@ -59,34 +93,3 @@ npm install
 </html>
 ```
 
-#### TEAM MEMBERS
-
-<table align=center>
-    <thead>
-        <tr >
-            <th style="text-align:center;" >송예림</th>
-            <th style="text-align:center;" >황철원</th>
-            <th style="text-align:center;" >김상학</th>
-            <th style="text-align:center;" >노승우</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><img width="200" src="https://avatars.githubusercontent.com/u/65770658?v=4" /> </td>
-            <td><img width="200" src="https://avatars.githubusercontent.com/u/82077853?v=4" /></td>
-            <td><img width="200" src="https://avatars.githubusercontent.com/u/129316014?v=4" /></td>
-            <td><img width="200" src=https://avatars.githubusercontent.com/u/175581195?s=200&v=4" /></td>
-        </tr>
-        <tr style="text-align:center;">
-            <td><a href="https://github.com/yerim8373">@yerim8373</a></td>
-            <td><a href="https://github.com/Cheol-Cheol">@Cheol-Cheol</a></td>
-            <td><a href="https://github.com/sanghk32">@sanghk32</a></td>
-            <td><a href="https://github.com/nsw2022">@nsw2022</a></td>
-        </tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
