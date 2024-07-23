@@ -43,6 +43,18 @@ class CommonNav extends HTMLElement {
               <span><i class="bi bi-alarm-fill"></i></span>
               <a class="nav-link" href="#">근무 시간 관리</a>
             </li>
+            <li class="nav-item">
+              <span><i class="bi bi-pencil-square"></i></span>
+              <a class="nav-link" aria-current="page" href="#">급여 대장</a>
+            </li>
+            <li class="nav-item">
+              <span><i class="bi bi-pencil-square"></i></span>
+              <a class="nav-link" aria-current="page" href="#">상여 대장</a>
+            </li>
+            <li class="nav-item">
+              <span><i class="bi bi-wrench-adjustable"></i></span>
+              <a class="nav-link" aria-current="page" href="#">급여 관리 설정</a>
+            </li>
             <!-- 추가적인 네비게이션 항목 -->
           </ul>
           <!-- 로그아웃 -->
