@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sm4U - 로그인</title>
+    <link rel="icon" href="/public/images/favicon.png" />
+    <link rel="stylesheet" href="/src/components/common/reset.css" />
+    <link rel="stylesheet" href="/src/components/login/login.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="logo-area">
+        <div class="logo"></div>
+      </div>
+      <form class="login-form" action="">
+        <input
+          type="text"
+          placeholder="아이디를 입력해주세요."
+          required
+          name="userId"
+        />
+        <input
+          type="password"
+          placeholder="비밀번호를 입력해주세요."
+          required
+          name="userPw"
+        />
+
+        <div class="divider"></div>
+
+        <button type="submit" class="login-button">로그인</button>
+      </form>
+    </div>
+    <script>
+      $(function () {
+        // 폼 제출 핸들러
+        $('form').submit(function () {
+          // event.preventDefault(); // 기본 제출 방지
+          $.ajax({
+            url: 'http://127.0.0.1:3000/todos',
+            type: 'get',
+            data: $(this).serialize(), // 폼 데이터 직렬화
+            dataType: 'json',
+            success: function (data) {
+              // 데이터를 받아서 HTML로 변환 후 페이지에 추가
+              console.log('success' + data);
+              console.table(data);
+            },
+            error: function (xhr, status, error) {
+              console.error('Error: ' + error);
+            },
+          });
+
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>
