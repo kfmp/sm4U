@@ -13,12 +13,19 @@
   <body>
     <script>
       $(function () {
+        const id = admin;
+        const pw = 1234;
+
         $.ajax({
           url: '/src/pages/login/login.html',
           type: 'post',
           dataType: 'json',
           success: function (data) {
             console.log(data);
+            console.log(id + pw);
+          },
+          error: function (error) {
+            console.log(error);
           },
         });
       });

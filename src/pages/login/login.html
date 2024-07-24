@@ -6,7 +6,7 @@
     <title>sm4U - 로그인</title>
     <link rel="icon" href="/public/images/favicon.png" />
     <link rel="stylesheet" href="/src/components/common/reset.css" />
-    <link rel="stylesheet" href="/src/components/login/login.css" />
+    <link rel="stylesheet" href="/src/pages/login/css/login.css" />
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -14,11 +14,17 @@
     ></script>
   </head>
   <body>
+    <common-header></common-header>
+    <common-nav></common-nav>
     <div class="login-container">
       <div class="logo-area">
         <div class="logo"></div>
       </div>
-      <form class="login-form" action="">
+      <form
+        class="login-form"
+        action="/src/pages/login/loginInsepct.html"
+        method="post"
+      >
         <input
           type="text"
           placeholder="아이디를 입력해주세요."
@@ -39,25 +45,30 @@
     </div>
     <script>
       $(function () {
-        // 폼 제출 핸들러
-        $('form').submit(function () {
-          // event.preventDefault(); // 기본 제출 방지
+        $('form').submit(function (event) {
+          event.preventDefault(); // 기본 폼 제출 방지
+
           $.ajax({
-            url: 'http://127.0.0.1:3000/todos',
-            type: 'get',
-            data: $(this).serialize(), // 폼 데이터 직렬화
-            dataType: 'json',
+            url: 'http://127.0.0.1:3000/users',
+            type: 'get', // get만됨 jsonServer가 받는 방식이 다른가? 학인필요
             success: function (data) {
-              // 데이터를 받아서 HTML로 변환 후 페이지에 추가
-              console.log('success' + data);
-              console.table(data);
+              const userId = $('input[name="userId"]').val();
+              const userPw = $('input[name="userPw"]').val();
+
+              const user = data.find(
+                (user) => user.id === userId && user.pw === userPw
+              );
+              if (user) {
+                console.log('Authentication successful for user:', user.name);
+                alert('로그인 성공: ' + user.id);
+              } else {
+                alert('로그인 실패!');
+              }
             },
             error: function (xhr, status, error) {
               console.error('Error: ' + error);
             },
           });
-
-          return false;
         });
       });
     </script>

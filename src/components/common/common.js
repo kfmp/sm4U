@@ -72,6 +72,7 @@ class CommonNav extends HTMLElement {
         </div>
       </div>
     `;
+    this.setAttribute('rel', '');
   }
 
   connectedCallback() {
