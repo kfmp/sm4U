@@ -14,6 +14,9 @@
 .userDetail-top-wrap > div {
   display: flex;
   justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .userDetail-top-wrap > div > p {
