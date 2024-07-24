@@ -37,7 +37,7 @@
           required
           name="userPw"
         />
-
+        <a href="#" id="error-message"></a>
         <div class="divider"></div>
 
         <button type="submit" class="login-button">로그인</button>
@@ -60,9 +60,9 @@
               );
               if (user) {
                 console.log('Authentication successful for user:', user.name);
-                alert('로그인 성공: ' + user.id);
+                location.href = '/';
               } else {
-                alert('로그인 실패!');
+                $('#error-message').text('비밀번호가 틀렸습니다.').show();
               }
             },
             error: function (xhr, status, error) {
