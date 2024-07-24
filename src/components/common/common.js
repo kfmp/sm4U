@@ -21,44 +21,44 @@ class CommonNav extends HTMLElement {
         <!-- 공통 네비게이션 -->
         <div class="common-nav">
           <!-- 로고 -->
-          <div class="nav-logo">
-            <div class="logo"></div>
+          <div class="common-nav-logo">
+            <div class="common-logo"></div>
           </div>
           <!-- 시스템 시간 -->
-          <div class="nav-clock">
+          <div class="common-nav-clock">
             <h1 id="clock">16:28:30</h1>
             <span>2024-07-23(화)</span>
           </div>
           <!-- 네비게이션 바 -->
           <ul class="nav flex-column">
-            <li class="nav-item nav-item__active">
+            <li class="nav-item common-nav-item common-nav__active">
               <span><i class="bi bi-house"></i></span>
               <a class="nav-link" aria-current="page" href="#">홈</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item common-nav-item">
               <span><i class="bi bi-coin"></i></span>
               <a class="nav-link" href="#">사원별 급여 관리</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item common-nav-item">
               <span><i class="bi bi-alarm-fill"></i></span>
               <a class="nav-link" href="#">근무 시간 관리</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item common-nav-item">
               <span><i class="bi bi-pencil-square"></i></span>
               <a class="nav-link" aria-current="page" href="#">급여 대장</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item common-nav-item">
               <span><i class="bi bi-pencil-square"></i></span>
               <a class="nav-link" aria-current="page" href="#">상여 대장</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item common-nav-item">
               <span><i class="bi bi-wrench-adjustable"></i></span>
               <a class="nav-link" aria-current="page" href="#">급여 관리 설정</a>
             </li>
             <!-- 추가적인 네비게이션 항목 -->
           </ul>
           <!-- 로그아웃 -->
-          <div class="logout">
+          <div class="common-logout">
             <div class="btn btn-warning">로그아웃</div>
           </div>
         </div>
@@ -67,7 +67,7 @@ class CommonNav extends HTMLElement {
           <div class="common-header__wrap">
             <span><i class="bi bi-gear"></i></span>
             <span><i class="bi bi-bell"></i></span>
-            <div class="profile"></div>
+            <div class="common-profile"></div>
           </div>
         </div>
       </div>
