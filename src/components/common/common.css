@@ -1,5 +1,5 @@
 .common-nav {
-  background-color: #2b3f6b;
+  background-color: #1c2335;
   width: 13%;
   height: 100vh;
   position: fixed;
@@ -8,21 +8,21 @@
   z-index: 1000;
 }
 
-.nav-logo {
+.common-nav-logo {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 200px;
 }
 
-.logo {
+.common-logo {
   background-image: url('/public/images/logo.svg');
   background-repeat: no-repeat;
   width: 100px;
   height: 100px;
 }
 
-.nav-clock {
+.common-nav-clock {
   width: 100%;
   height: 100px;
   margin-bottom: 30px;
@@ -33,21 +33,21 @@
   position: relative;
 }
 
-.nav-clock span {
+.common-nav-clock span {
   font-size: 14px;
   position: absolute;
   bottom: 25px;
   right: 70px;
 }
 
-.wrap {
+.common-wrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav-item {
+.common-nav-item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -61,7 +61,7 @@
   border-radius: 10px;
 }
 
-.nav-item__active {
+.common-nav__active {
   background-color: #7b8ea9;
 }
 
@@ -70,7 +70,7 @@
   font-size: 14px;
 }
 
-.logout {
+.common-logout {
   position: absolute;
   left: 4px;
   bottom: 10px;
@@ -80,12 +80,15 @@
   align-items: center;
 }
 
-.logout div {
+.common-logout div {
   width: 100%;
   height: 35px;
   border-radius: 10px;
   line-height: 20px;
   color: white;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: orange;
 }
 
 /* 공통 헤더 */
@@ -113,7 +116,7 @@
   font-size: 20px;
 }
 
-.profile {
+.common-profile {
   background-image: url('/public/images/profile.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -124,7 +127,10 @@
 
 .main {
   margin-top: 50px;
-  padding: 20px;
   margin-left: 13%;
-  height: 94.6vh;
+  height: 100%;
+}
+
+.p-20 {
+  padding: 20px;
 }
