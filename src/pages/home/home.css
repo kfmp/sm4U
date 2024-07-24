@@ -1,9 +1,10 @@
-.main-tab {
-  background-color: #2b3f6b;
+.main-header {
+  background-color: #1c2335;
+  display: flex;
   height: 50px;
 }
 
-.main-tab-wrap {
+.main-tab {
   display: flex;
   align-items: flex-end;
   width: 95%;
@@ -11,32 +12,224 @@
   margin: 0 auto;
 }
 
-.main-tab-item {
-  min-width: 150px;
+.nav-link {
   height: 35px;
-  color: #aaaaaa;
-  background-color: #f3f3f3;
+  background-color: #ced4da;
+  color: gray;
+  line-height: 10px;
+  padding: 0px 25px;
   font-size: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-left: 1px solid #eee;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  cursor: pointer;
 }
 
-.main-tab-item:hover {
+.nav-link:hover {
+  color: black;
   background-color: #eee;
 }
 
-.main-tab-item__active {
-  color: black;
-  background-color: white;
-  font-weight: 600;
+.main-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-body {
-  background-color: red;
-  height: 94.5vh;
+  width: 1430px;
+  height: 805px;
+}
+
+.card-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 140px;
+  background-color: white;
+}
+
+.card {
+  box-shadow: 0 0 4px #333;
+}
+
+.w-18 {
+  width: 18%;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.txt-right {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.card-body p {
+  font-size: 14px;
+}
+
+.card-body span {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.graph-wrap {
+  /* background-color: red; */
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side {
+  width: 45%;
+  height: 600px;
+}
+
+.doughnut-graph {
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.right-side {
+  width: 53%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.line-graph {
+  height: 49%;
+}
+
+.confirm-board {
+  height: 49%;
+}
+
+#doughnutChart {
+  width: 950px;
+  height: 950px;
+}
+
+#lineChart {
+  height: 235px;
+}
+
+.list {
+  /* background-color: red; */
+  height: 100%;
+}
+
+.list-head {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 5px;
+}
+
+.list-head div {
+  font-size: 14px;
+  font-weight: 600;
+  width: 10%;
+}
+
+.list-head div:nth-child(1) {
+  width: 5%;
+  text-align: center;
+}
+
+.list-head div:nth-child(2) {
+  width: 20%;
+  margin-right: 10px;
+}
+
+.list-head div:nth-child(3) {
+  width: 38%;
+  margin-right: 10px;
+}
+
+.list-head div:nth-child(4) {
+  width: 10%;
+  margin-right: 10px;
+}
+
+.list-head div:nth-child(5) {
+  width: 15%;
+  text-align: center;
+  margin-right: 15px;
+}
+
+/*  */
+.list-body {
+  overflow-y: scroll;
+  height: 200px;
+}
+
+.list-body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #eee;
+}
+
+.list-body::-webkit-scrollbar-thumb {
+  background-color: #7c869b;
+  border-radius: 10px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 5px 0px;
+}
+
+.list-item div {
+  font-size: 14px;
+  width: 10%;
+}
+
+.list-item div:nth-child(1) {
+  width: 5%;
+  text-align: center;
+}
+
+.list-item div:nth-child(2) {
+  width: 20%;
+}
+
+.list-item div:nth-child(3) {
+  width: 40%;
+}
+
+.list-item div:nth-child(4) {
+  width: 10%;
+}
+
+.list-item div:nth-child(5) {
+  width: 15%;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.badge {
+  width: 100px;
+  height: 20px;
+  font-size: 13px !important;
+  font-weight: 600;
+}
+
+.text-bg-warning {
+  background-color: orange !important;
+  color: white !important;
+}
+
+#doughnutChart2 {
+  width: 950px;
+  height: 950px;
+}
+
+#lineChart2 {
+  height: 235px;
 }

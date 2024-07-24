@@ -28,7 +28,7 @@
     <common-nav></common-nav>
 
     <div class="main">
-      <div class="main-body">
+      <div class="main-header">
         <div class="main-tab">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -42,7 +42,7 @@
                 aria-controls="home-tab-pane"
                 aria-selected="true"
               >
-                Home
+                급여 현황 조회
               </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -56,56 +56,385 @@
                 aria-controls="profile-tab-pane"
                 aria-selected="false"
               >
-                Profile
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="contact-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#contact-tab-pane"
-                type="button"
-                role="tab"
-                aria-controls="contact-tab-pane"
-                aria-selected="false"
-              >
-                Contact
+                상여 현황 조회
               </button>
             </li>
           </ul>
         </div>
+      </div>
 
-        <div class="tab-content" id="myTabContent">
-          <div
-            class="tab-pane fade show active"
-            id="home-tab-pane"
-            role="tabpanel"
-            aria-labelledby="home-tab"
-            tabindex="0"
-          >
-            1
-          </div>
-          <div
-            class="tab-pane fade"
-            id="profile-tab-pane"
-            role="tabpanel"
-            aria-labelledby="profile-tab"
-            tabindex="0"
-          >
-            2
-          </div>
-          <div
-            class="tab-pane fade"
-            id="contact-tab-pane"
-            role="tabpanel"
-            aria-labelledby="contact-tab"
-            tabindex="0"
-          >
-            3
+      <div class="main-wrap">
+        <div class="main-body">
+          <div class="tab-content" id="myTabContent">
+            <!-- 급여 현황 조회 -->
+            <div
+              class="tab-pane fade show active"
+              id="home-tab-pane"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+              tabindex="0"
+            >
+              <!-- 카드 -->
+              <div class="card-wrap">
+                <div class="card w-18">
+                  <div class="card-header">급여 대상자</div>
+                  <div class="card-body txt-right">
+                    <blockquote class="blockquote mb-0">
+                      <p><span>27</span> 명</p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="card w-18">
+                  <div class="card-header">세전 총 지급합계</div>
+                  <div class="card-body txt-right">
+                    <blockquote class="blockquote mb-0">
+                      <p><span>371,821,266</span> 원</p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="card w-18">
+                  <div class="card-header">공제합계</div>
+                  <div class="card-body txt-right">
+                    <blockquote class="blockquote mb-0">
+                      <p><span>132,855,725</span> 원</p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="card w-18">
+                  <div class="card-header">공제 후 지급액</div>
+                  <div class="card-body txt-right">
+                    <blockquote class="blockquote mb-0">
+                      <p><span>10,603,500</span> 원</p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="card w-18">
+                  <div class="card-header">미지급 급여</div>
+                  <div class="card-body txt-right">
+                    <blockquote class="blockquote mb-0">
+                      <p><span>10,603,500</span> 원</p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 그래프/결재현황 -->
+              <div class="graph-wrap">
+                <div class="left-side">
+                  <div class="doughnut-graph h-100">
+                    <div class="card h-100">
+                      <div class="card-header">당월 급여 현황 그래프</div>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <canvas id="doughnutChart"></canvas>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="right-side">
+                  <!-- 라인 그래프  -->
+                  <div class="line-graph">
+                    <div class="card h-100">
+                      <div class="card-header">월별 급여 추이 그래프</div>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <canvas id="lineChart"></canvas>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 결재 현황 목록 -->
+                  <div class="confirm-board">
+                    <div class="card h-100">
+                      <div class="card-header">결재 현황</div>
+                      <div class="card-body">
+                        <div class="list">
+                          <div class="list-head">
+                            <div>#</div>
+                            <div>기안일</div>
+                            <div class="list-head-title">제목</div>
+                            <div>수신부서</div>
+                            <div>결재상태</div>
+                          </div>
+                          <div class="list-body">
+                            <div class="list-item">
+                              <div>1</div>
+                              <div>2024-07-24</div>
+                              <div>24년도 7월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-warning">
+                                결재진행중
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>2</div>
+                              <div>2024-06-24</div>
+                              <div>24년도 6월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>3</div>
+                              <div>2024-05-24</div>
+                              <div>24년도 5월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>4</div>
+                              <div>2024-04-24</div>
+                              <div>24년도 4월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>5</div>
+                              <div>2024-03-24</div>
+                              <div>24년도 3월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>6</div>
+                              <div>2024-02-24</div>
+                              <div>24년도 2월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>7</div>
+                              <div>2024-01-24</div>
+                              <div>24년도 1월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>8</div>
+                              <div>2023-12-24</div>
+                              <div>23년도 12월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>9</div>
+                              <div>2023-11-24</div>
+                              <div>23년도 11월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 상여 현황 조회 -->
+            <div
+              class="tab-pane fade"
+              id="profile-tab-pane"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+              tabindex="0"
+            >
+              <!-- 카드 -->
+              <div class="card-wrap">
+                <div class="card w-18">
+                  <div class="card-header">상여 대상자</div>
+                  <div class="card-body txt-right">
+                    <blockquote class="blockquote mb-0">
+                      <p><span>27</span> 명</p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="card w-18">
+                  <div class="card-header">지급합계</div>
+                  <div class="card-body txt-right">
+                    <blockquote class="blockquote mb-0">
+                      <p><span>12,000,000</span> 원</p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="card w-18">
+                  <div class="card-header">공제합계</div>
+                  <div class="card-body txt-right">
+                    <blockquote class="blockquote mb-0">
+                      <p><span>1,396,500</span> 원</p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="card w-18">
+                  <div class="card-header">공제 후 지급액</div>
+                  <div class="card-body txt-right">
+                    <blockquote class="blockquote mb-0">
+                      <p><span>10,603,500</span> 원</p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="card w-18">
+                  <div class="card-header">미지급 상여</div>
+                  <div class="card-body txt-right">
+                    <blockquote class="blockquote mb-0">
+                      <p><span>10,603,500</span> 원</p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 그래프/결재현황 -->
+              <div class="graph-wrap">
+                <div class="left-side">
+                  <div class="doughnut-graph h-100">
+                    <div class="card h-100">
+                      <div class="card-header">당월 상여 현황 그래프</div>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <canvas id="doughnutChart2"></canvas>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="right-side">
+                  <!-- 라인 그래프  -->
+                  <div class="line-graph">
+                    <div class="card h-100">
+                      <div class="card-header">월별 상여 추이 그래프</div>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <canvas id="lineChart2"></canvas>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 결재 현황 목록 -->
+                  <div class="confirm-board">
+                    <div class="card h-100">
+                      <div class="card-header">결재 현황</div>
+                      <div class="card-body">
+                        <div class="list">
+                          <div class="list-head">
+                            <div>#</div>
+                            <div>기안일</div>
+                            <div class="list-head-title">제목</div>
+                            <div>수신부서</div>
+                            <div>결재상태</div>
+                          </div>
+                          <div class="list-body">
+                            <div class="list-item">
+                              <div>1</div>
+                              <div>2024-07-24</div>
+                              <div>24년도 7월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-warning">
+                                결재진행중
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>2</div>
+                              <div>2024-06-24</div>
+                              <div>24년도 6월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>3</div>
+                              <div>2024-05-24</div>
+                              <div>24년도 5월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>4</div>
+                              <div>2024-04-24</div>
+                              <div>24년도 4월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>5</div>
+                              <div>2024-03-24</div>
+                              <div>24년도 3월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>6</div>
+                              <div>2024-02-24</div>
+                              <div>24년도 2월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>7</div>
+                              <div>2024-01-24</div>
+                              <div>24년도 1월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>8</div>
+                              <div>2023-12-24</div>
+                              <div>23년도 12월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                            <div class="list-item">
+                              <div>9</div>
+                              <div>2023-11-24</div>
+                              <div>23년도 11월 결재 요청서</div>
+                              <div>영업팀</div>
+                              <div class="badge rounded-pill text-bg-primary">
+                                결재완료
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- <canvas id="myChart"></canvas> -->
       </div>
     </div>
 
@@ -114,37 +443,13 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!-- <script>
-      var ctx = document.getElementById('myChart').getContext('2d');
-      var chart = new Chart(ctx, {
-        // 만들기 원하는 차트의 유형
-        type: 'line',
 
-        // 데이터 집합을 위한 데이터
-        data: {
-          labels: [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-          ],
-          datasets: [
-            {
-              label: 'My First dataset',
-              backgroundColor: 'rgb(255, 99, 132)',
-              borderColor: 'rgb(255, 99, 132)',
-              data: [0, 10, 5, 2, 20, 30, 45],
-            },
-          ],
-        },
-
-        // 설정은 여기서 하세요
-        options: {},
-      });
-    </script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/pages/home/graph.js"></script>
     <script type="module" src="/src/index.js"></script>
   </body>
 </html>
