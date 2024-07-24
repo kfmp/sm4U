@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  padding: 20mm;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+header,
+footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.info div {
+  display: flex;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.total {
+  font-size: 1.2em;
+  margin-top: 20px;
+  text-align: right;
+}
+
+footer p {
+  margin-top: 40px;
+}

@@ -1,0 +1,31 @@
+.main-body {
+  height: 94.5vh;
+}
+
+.main-tab-wrap {
+  background-color: #1c2335;
+  display: flex;
+  height: 50px;
+}
+
+.main-tab {
+  display: flex;
+  align-items: flex-end;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nav-link {
+  height: 35px;
+  background-color: #ced4da;
+  color: gray;
+  line-height: 10px;
+  padding: 0px 25px;
+  font-size: 15px;
+}
+
+.nav-link:hover {
+  color: black;
+  background-color: #eee;
+}

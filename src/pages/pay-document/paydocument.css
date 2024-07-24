@@ -1,0 +1,227 @@
+.main-body {
+  height: 94.5vh;
+}
+
+.main-tab-wrap {
+  background-color: #1c2335;
+  display: flex;
+  height: 50px;
+}
+
+.main-tab {
+  display: flex;
+  align-items: flex-end;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nav-link {
+  height: 35px;
+  background-color: #ced4da;
+  color: gray;
+  line-height: 10px;
+  padding: 0px 25px;
+  font-size: 15px;
+}
+
+.nav-link:hover {
+  color: black;
+  background-color: #eee;
+}
+
+.pay-doc-content-title {
+  padding: 16px 8px 8px 16px;
+  margin-bottom: 0;
+}
+
+.pay-doc-wrap {
+  display: flex;
+  flex-grow: 0.25;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pay-doc-top-button {
+  border: 1px solid var(--bs-btn-active-border-color);
+  padding-top: 4px;
+}
+
+.pay-doc-top-date {
+  width: inherit;
+}
+
+.pay-doc-top-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+#home-tab-pane > div > div.pay-doc-wrap > p {
+  margin-bottom: 0;
+}
+
+/* 철원형 카드 */
+.card-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 130px;
+  background-color: white;
+}
+
+.card {
+  box-shadow: 0 0 4px #333;
+}
+
+.w-18 {
+  width: 18%;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.txt-right {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.card-body p {
+  font-size: 14px;
+}
+
+.card-body span {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* 사원검색 */
+.pay-doc-search {
+  display: flex;
+  align-items: center;
+}
+
+.pay-doc-search p {
+  margin-bottom: 0;
+}
+
+.pay-doc-search .form-select {
+  /* 안먹음 직접넣음 */
+  width: 200px;
+}
+
+#departments {
+  width: 200px;
+
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-image: var(--bs-form-select-bg-img),
+    var(--bs-form-select-bg-icon, none);
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#departments2 {
+  width: 200px;
+  --bs-form-select-bg-img: url('/public/images/sitemap-solid.svg');
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-image: var(--bs-form-select-bg-img),
+    var(--bs-form-select-bg-icon, none);
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-search {
+  --bs-form-select-bg-img: url('/public/images/sitemap-solid.svg');
+}
+
+.pay-doc-search > * {
+  margin-right: 10px;
+}
+
+.pay-doc-due-day {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.pay-doc-due-day p {
+  margin-bottom: 0;
+}
+
+.pay-doc-due-day > * {
+  margin-right: 10px;
+}
+
+.table-responsive {
+  overflow-y: auto;
+  height: 400px;
+}
+table {
+  width: 500px;
+  border-collapse: collapse;
+  table-layout: fixed; /* 추가된 부분 */
+}
+
+/* 사원 클릭해서 오른쪽에 창이 나하난 상태가 아니라면 white-space, overflow: text-overflow:  max-width: 의 속성을 꺼주면 된다
+ */
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100px; /* max-width 대신 width 사용을 고려 */
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background-color: #f2f2f2;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* .table-responsive::-webkit-scrollbar {
+  width: 6px;
+  background-color: #eee;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #7c869b;
+  border-radius: 10px;
+} */

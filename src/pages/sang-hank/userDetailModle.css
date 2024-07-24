@@ -1,0 +1,21 @@
+/* 프로필 이미지 크기 조절 및 정렬 */
+.img-fluid {
+  width: 128px;
+  height: 125px;
+  border-radius: 8px;
+}
+
+.userDetailImg-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.userDetail-top-wrap > div {
+  display: flex;
+  justify-items: center;
+}
+
+.userDetail-top-wrap > div > p {
+  margin-bottom: 0;
+}
