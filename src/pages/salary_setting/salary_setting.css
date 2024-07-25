@@ -1,0 +1,136 @@
+.main2 {
+  width: 1430px;
+  height: 889px;
+  margin: 0 auto;
+}
+
+.select-menu {
+  background-color: blue;
+  height: 200px;
+}
+
+.nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #b3b8c2;
+}
+
+.nav-link .active {
+  color: black !important;
+}
+
+p {
+  margin-bottom: 5px;
+  /* white-space: pre-wrap; */
+}
+
+#vertical-rule {
+  font-weight: normal;
+  color: #b3b8c2;
+}
+
+hr {
+  margin-top: 0;
+}
+
+#payment-items-table {
+  overflow-y: auto;
+  height: 600px;
+}
+
+#payment-items-thead {
+  position: sticky;
+  top: 0;
+}
+
+#payment-items-table tr {
+  text-align: center;
+}
+
+#use-status {
+  height: 23px;
+  width: 50px;
+  text-align: center;
+}
+
+/* 근로시간 설정 */
+.working-time-setting {
+  position: relative;
+  height: 500px;
+}
+
+.wts-title {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.delay-time,
+.basic-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin-top: 10px;
+}
+
+.delay-time > div,
+.basic-time > div {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.delay-time input,
+.basic-time input {
+  width: 70px;
+  margin-right: 5px;
+}
+
+.input-box {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.input-box span {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.save-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 8px 10px;
+  width: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #ababab;
+  font-weight: 600;
+}
+
+.save-btn:hover {
+  background-color: #1c2335;
+  color: white;
+}
+
+.wts-info {
+  margin-top: 50px;
+}
+
+.cblue {
+  color: rgb(71, 71, 255);
+  font-weight: 600;
+}
+
+.t-underline {
+  text-decoration: underline;
+  font-weight: 600;
+}
