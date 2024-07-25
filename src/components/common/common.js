@@ -39,11 +39,11 @@ class CommonNav extends HTMLElement {
               <span><i class="bi bi-coin"></i></span>
               <a class="common-nav-link" href="#">사원별 급여 관리</a>
             </li>
-            <li class="nav-item common-nav-item">
+            <li class="nav-item common-nav-item" data-path="/src/pages/salary-management/working-time-management.html">
               <span><i class="bi bi-alarm-fill"></i></span>
               <a class="common-nav-link" href="#">근무 시간 관리</a>
             </li>
-            <li class="nav-item common-nav-item">
+            <li class="nav-item common-nav-item" data-path="/src/pages/pay-document/paydocument.html">
               <span><i class="bi bi-pencil-square"></i></span>
               <a class="common-nav-link" aria-current="page" href="#">급여 대장</a>
             </li>
@@ -51,7 +51,7 @@ class CommonNav extends HTMLElement {
               <span><i class="bi bi-pencil-square"></i></span>
               <a class="common-nav-link" aria-current="page" href="#">상여 대장</a>
             </li>
-            <li class="nav-item common-nav-item">
+            <li class="nav-item common-nav-item" data-path="/src/pages/salary_setting/salary_setting.html">
               <span><i class="bi bi-wrench-adjustable"></i></span>
               <a class="common-nav-link" aria-current="page" href="#">급여 관리 설정</a>
             </li>
