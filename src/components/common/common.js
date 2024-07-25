@@ -76,7 +76,18 @@ class CommonNav extends HTMLElement {
   }
 
   connectedCallback() {
+    const profileImg = JSON.parse(localStorage.getItem('profile'));
+    $(this.shadowRoot.querySelector('.common-profile')).css(
+      'background-image',
+      `url(${profileImg})`
+    );
+
     this.timer = setInterval(() => this.updateClock(), 1000);
+
+    $(this.shadowRoot.querySelector('.common-logout')).on('click', function () {
+      localStorage.clear();
+      $(location).attr('href', '/src/pages/login/login.html');
+    });
   }
 
   disconnectedCallback() {

@@ -2,7 +2,8 @@
   {
     "id": "1",
     "username": "황철원",
-    "userId": "cheolwon1234",
-    "userPw": "1234"
+    "userId": "admin1234",
+    "userPw": "1234",
+    "profileImg": "/public/images/admin1-profile.jpeg"
   }
 ]
