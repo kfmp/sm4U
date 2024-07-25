@@ -27,7 +27,7 @@ class CommonNav extends HTMLElement {
           <!-- 시스템 시간 -->
           <div class="common-nav-clock">
             <h1 id="clock">16:28:30</h1>
-            <span>2024-07-23(화)</span>
+            <span id="custom-date">2024-07-23(화)</span>
           </div>
           <!-- 네비게이션 바 -->
           <ul class="nav flex-column" id="nav-event">
@@ -83,6 +83,7 @@ class CommonNav extends HTMLElement {
     );
 
     this.timer = setInterval(() => this.updateClock(), 1000);
+    this.updateDate(); // 날짜 초기화
 
     $(this.shadowRoot.querySelector('.common-logout')).on('click', function () {
       localStorage.clear();
@@ -124,6 +125,18 @@ class CommonNav extends HTMLElement {
     const m = String(now.getMinutes()).padStart(2, '0');
     const s = String(now.getSeconds()).padStart(2, '0');
     this.shadowRoot.querySelector('#clock').innerText = `${h}:${m}:${s}`;
+  }
+
+  updateDate() {
+    const now = new Date();
+    const options = {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      weekday: 'long',
+    };
+    const formattedDate = now.toLocaleDateString('ko-KR', options);
+    this.shadowRoot.querySelector('#custom-date').innerText = formattedDate;
   }
 }
 
