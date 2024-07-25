@@ -30,30 +30,30 @@ class CommonNav extends HTMLElement {
             <span>2024-07-23(화)</span>
           </div>
           <!-- 네비게이션 바 -->
-          <ul class="nav flex-column">
-            <li class="nav-item common-nav-item common-nav__active">
+          <ul class="nav flex-column" id="nav-event">
+            <li class="nav-item common-nav-item common-nav__active" data-path="/src/pages/home/home.html">
               <span><i class="bi bi-house"></i></span>
-              <a class="nav-link" aria-current="page" href="#">홈</a>
+              <a class="common-nav-link" aria-current="page" href="#">홈</a>
             </li>
-            <li class="nav-item common-nav-item">
+            <li class="nav-item common-nav-item" data-path="/src/pages/salary-management/salary-management-foreach.html">
               <span><i class="bi bi-coin"></i></span>
-              <a class="nav-link" href="#">사원별 급여 관리</a>
+              <a class="common-nav-link" href="#">사원별 급여 관리</a>
             </li>
             <li class="nav-item common-nav-item">
               <span><i class="bi bi-alarm-fill"></i></span>
-              <a class="nav-link" href="#">근무 시간 관리</a>
+              <a class="common-nav-link" href="#">근무 시간 관리</a>
             </li>
             <li class="nav-item common-nav-item">
               <span><i class="bi bi-pencil-square"></i></span>
-              <a class="nav-link" aria-current="page" href="#">급여 대장</a>
+              <a class="common-nav-link" aria-current="page" href="#">급여 대장</a>
             </li>
             <li class="nav-item common-nav-item">
               <span><i class="bi bi-pencil-square"></i></span>
-              <a class="nav-link" aria-current="page" href="#">상여 대장</a>
+              <a class="common-nav-link" aria-current="page" href="#">상여 대장</a>
             </li>
             <li class="nav-item common-nav-item">
               <span><i class="bi bi-wrench-adjustable"></i></span>
-              <a class="nav-link" aria-current="page" href="#">급여 관리 설정</a>
+              <a class="common-nav-link" aria-current="page" href="#">급여 관리 설정</a>
             </li>
             <!-- 추가적인 네비게이션 항목 -->
           </ul>
@@ -88,6 +88,30 @@ class CommonNav extends HTMLElement {
       localStorage.clear();
       $(location).attr('href', '/src/pages/login/login.html');
     });
+
+    // 네비게이션
+    $(this.shadowRoot.querySelector('#nav-event')).on(
+      'click',
+      'li',
+      function () {
+        const path = $(this).attr('data-path');
+
+        localStorage.setItem('activeNav', path);
+
+        $(location).attr('href', path);
+      }
+    );
+
+    const activeNav = localStorage.getItem('activeNav');
+    if (activeNav) {
+      this.shadowRoot.querySelectorAll('#nav-event li').forEach((li) => {
+        if ($(li).attr('data-path') === activeNav) {
+          $(li).addClass('common-nav__active');
+        } else {
+          $(li).removeClass('common-nav__active');
+        }
+      });
+    }
   }
 
   disconnectedCallback() {
