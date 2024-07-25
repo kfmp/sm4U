@@ -24,6 +24,12 @@
     />
     <link rel="stylesheet" href="/src/components/common/common.css" />
     <script type="module" src="/src/components/common/common.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="salary_setting.js"></script>
   </head>
   <body>
     <common-header></common-header>
@@ -278,6 +284,7 @@
                   </select>
                   <div class="row p-3">
                     <input
+                      id="day-input"
                       class="form-control col-auto w-25 text-end"
                       type="text"
                       value="10"
@@ -286,6 +293,7 @@
                     <label class="col-auto pt-1"> 일 ( </label>
                     <div class="form-check col-sm-2 pt-1">
                       <input
+                        id="last-day-select"
                         class="form-check-input"
                         type="checkbox"
                         value=""
