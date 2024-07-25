@@ -56,3 +56,81 @@ hr {
   width: 50px;
   text-align: center;
 }
+
+/* 근로시간 설정 */
+.working-time-setting {
+  position: relative;
+  height: 500px;
+}
+
+.wts-title {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.delay-time,
+.basic-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin-top: 10px;
+}
+
+.delay-time > div,
+.basic-time > div {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.delay-time input,
+.basic-time input {
+  width: 70px;
+  margin-right: 5px;
+}
+
+.input-box {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.input-box span {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.save-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 8px 10px;
+  width: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #ababab;
+  font-weight: 600;
+}
+
+.save-btn:hover {
+  background-color: #1c2335;
+  color: white;
+}
+
+.wts-info {
+  margin-top: 50px;
+}
+
+.cblue {
+  color: rgb(71, 71, 255);
+  font-weight: 600;
+}
+
+.t-underline {
+  text-decoration: underline;
+  font-weight: 600;
+}
