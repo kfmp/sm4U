@@ -26,6 +26,11 @@
       "id": 2,
       "name": "Kim",
       "role": "designer"
+    },
+    {
+      "id": "admin",
+      "name": "No",
+      "pw": "1234"
     }
   ]
 }
