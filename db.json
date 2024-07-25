@@ -32,5 +32,124 @@
       "name": "No",
       "pw": "1234"
     }
+  ],
+  "paymentItems": [
+    {
+      "id": 1,
+      "name": "기본급",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": 2,
+      "name": "고정초과근무수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": true,
+      "taxFreeLimit": 2100000,
+      "isUsed": true
+    },
+    {
+      "id": 3,
+      "name": "초과근무수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": 4,
+      "name": "주휴수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": 5,
+      "name": "차량지원금",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": true,
+      "taxFreeLimit": 200000,
+      "isUsed": true
+    },
+    {
+      "id": 6,
+      "name": "보상휴가수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": 7,
+      "name": "출산전후휴가수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": 8,
+      "name": "휴업수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": 9,
+      "name": "식비",
+      "fixedAllowance": false,
+      "amount": 100000,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": 10,
+      "name": "자녀보육수당",
+      "fixedAllowance": false,
+      "amount": 100000,
+      "taxFree": true,
+      "taxFreeLimit": 200000,
+      "isUsed": true
+    },
+    {
+      "id": 11,
+      "name": "직책수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": 12,
+      "name": "상여금",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": 13,
+      "name": "미사용연차수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    }
   ]
 }
