@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.24.8",
+    "@types/jquery": "^3.5.30",
     "chart.js": "^4.4.3"
   }
 }
