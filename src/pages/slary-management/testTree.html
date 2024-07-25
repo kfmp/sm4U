@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Company Organization Tree</title>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css" />
+    <style>
+      /* 기본 트리 스타일 설정 */
+      .tree,
+      .tree ul {
+        list-style: none; /* 목록 스타일 제거 */
+        padding-left: 1em; /* 왼쪽 패딩 추가 */
+      }
+
+      /* 기본 체크박스 숨김 처리 */
+      .tree input[type='checkbox'] {
+        display: none;
+      }
+
+      /* 레이블 커스텀 스타일링 */
+      .tree label {
+        cursor: pointer; /* 커서 포인터로 설정 */
+        position: relative; /* 포지션 상대적 설정 */
+        padding-left: 25px; /* 왼쪽 패딩 설정 */
+      }
+
+      /* 레이블의 아이콘 스타일 */
+      .tree label:before {
+        content: ''; /* 내용 제거 */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 17px;
+        height: 17px;
+        background-image: url('/public/images/sitemap-solid.svg'); /* 폴더 닫힘 아이콘 */
+        background-size: cover; /* 배경 이미지를 커버로 설정 */
+      }
+
+      /* 체크박스 체크시 아이콘 회전 */
+      .tree input[type='checkbox']:checked + label:before {
+        background-image: url('/public/images/readme-logo.svg'); /* 폴더 열림 아이콘 */
+      }
+
+      /* 체크되지 않았을 때 하위 목록 숨김 */
+      .tree input[type='checkbox']:not(:checked) ~ ul {
+        display: none;
+      }
+
+      /* 체크되었을 때 하위 목록 표시 */
+      .tree input[type='checkbox']:checked ~ ul {
+        display: block;
+      }
+
+      /* 링크 스타일 */
+      .tree a {
+        text-decoration: none; /* 밑줄 없애기 */
+        color: black; /* 텍스트 색상 검정 */
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="tree">
+      <li>
+        <input type="checkbox" id="exec" />
+        <label for="exec">임원실</label>
+        <ul>
+          <li><a href="#">CEO</a></li>
+        </ul>
+      </li>
+      <li>
+        <input type="checkbox" id="r-and-d" />
+        <label for="r-and-d">기술연구소</label>
+        <ul>
+          <li>
+            <input type="checkbox" id="dev" />
+            <label for="dev">개발팀</label>
+            <ul>
+              <li><a href="#">프로젝트그룹</a></li>
+              <li>
+                <input type="checkbox" id="finance" />
+                <label for="finance">경리회계T/F</label>
+                <ul>
+                  <li><a href="#">경리회계DMNC</a></li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" id="legal" />
+                <label for="legal">법무관리T/F</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" id="ops" />
+            <label for="ops">운영팀</label>
+            <ul>
+              <li><a href="#">박찬욱 차장</a></li>
+              <li><a href="#">김다우 상무</a></li>
+              <li><a href="#">마장웅 과장</a></li>
+              <li><a href="#">서창호 부장</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
