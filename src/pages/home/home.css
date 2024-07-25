@@ -1,3 +1,10 @@
+.main-body {
+  height: 94.5vh;
+}
+
+.main-tab-wrap {
+}
+
 .main-header {
   background-color: #1c2335;
   display: flex;

@@ -1,0 +1,67 @@
+/* 모달 그림자 */
+.modal-wrap {
+  box-shadow: 0 0 4px #333;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* 프로필 이미지 크기 조절 및 정렬 */
+.img-fluid {
+  width: 128px;
+  height: 125px;
+  border-radius: 8px;
+}
+
+.userDetailImg-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.userDetail-top-wrap > div {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.userDetail-top-wrap > div > p {
+  margin-bottom: 0;
+}
+
+.userDetail-top-wrap input {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+}
+
+.userDetail-additional-wrap {
+  background-color: red;
+  display: flex;
+  margin: auto;
+  height: 529px;
+}
+.userDetail-additional-first {
+  background-color: blue;
+  padding: 10px;
+  flex: 0.2;
+}
+.userDetail-additional-first p {
+  margin-top: 10px;
+}
+.userDetail-additional-second {
+  background-color: yellow;
+  padding: 10px;
+  flex: 0.3;
+}
+.userDetail-additional-therd {
+  background-color: green;
+  padding: 10px;
+  flex: 0.2;
+}
+.userDetail-additional-four {
+  background-color: aqua;
+  padding: 10px;
+  flex: 0.3;
+}
