@@ -248,3 +248,40 @@ tbody::-webkit-scrollbar-thumb {
 .table-box td.w-10 {
   width: 50px;
 }
+
+/* 모달창  */
+.cmt-wrap {
+  display: flex;
+}
+
+.cmt-wrap > div {
+  margin-right: 15px;
+}
+
+.cmt-wrap div {
+  font-size: 14px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+}
+
+.input-label {
+  font-size: 14px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+}
+
+.custom-input {
+  height: 32px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.w-100px {
+  width: 100px;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
