@@ -420,6 +420,7 @@
               <div class="row">
                 <button
                   type="button"
+                  id="btn-add-payment-item"
                   class="btn btn-outline-dark m-2 col-auto"
                   data-bs-toggle="modal"
                   data-bs-target="#add-payment-item-modal"
@@ -457,7 +458,7 @@
                       ></button>
                     </div>
                     <div class="modal-body">
-                      <form>
+                      <form id="add-payment-item-form">
                         <div class="row p-3">
                           <label
                             for="add-item-name"
@@ -469,6 +470,7 @@
                               type="text"
                               class="form-control"
                               id="add-item-name"
+                              name="add-item-name"
                               placeholder="항목명을 입력하세요."
                             />
                           </div>
@@ -485,12 +487,9 @@
                               type="radio"
                               name="add-fixed-allowance"
                               id="add-fixed-allowance-true"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="add-fixed-allowance-true"
-                              >해당
-                            </label>
+                              name="add-fixed-allowance"
+                              value="true"
+                            />해당
                           </div>
                           <div class="form-check col-auto ps-5">
                             <input
@@ -498,12 +497,9 @@
                               type="radio"
                               name="add-fixed-allowance"
                               id="add-fixed-allowance-false"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="add-fixed-allowance-false"
-                              >해당안함
-                            </label>
+                              name="add-fixed-allowance"
+                              value="false"
+                            />해당안함
                           </div>
                         </div>
                         <div class="row p-1">
@@ -517,6 +513,7 @@
                               type="text"
                               class="form-control"
                               id="add-item-amount"
+                              name="add-item-amount"
                             />
                           </div>
                           <span class="col-auto ps-1 pt-2">원</span>
@@ -532,9 +529,11 @@
                           >
                             <input
                               class="form-check-input"
+                              id="tax-free"
+                              name="tax-free"
                               type="checkbox"
                               role="switch"
-                              id="tax-free"
+                              checked
                             />
                           </div>
                         </div>
@@ -551,28 +550,8 @@
                                 class="form-select"
                                 aria-label="Default select example"
                                 id="tax-free-select"
+                                name="tax-free-select"
                               >
-                                <option selected value="자가운전보조금">
-                                  자가운전보조금
-                                </option>
-                                <option value="취재수당">취재수당</option>
-                                <option value="경호수당, 승선수당">
-                                  경호수당, 승선수당
-                                </option>
-                                <option
-                                  value="연구보조비 (육아교육법, 초중등교육법)"
-                                >
-                                  연구보조비 (육아교육법, 초중등교육법)
-                                </option>
-                                <option value="연구보조비 (고등교육법)">
-                                  연구보조비 (고등교육법)
-                                </option>
-                                <option
-                                  value="연구보조비 (특별법에 의한 교육기관)"
-                                >
-                                  연구보조비 (특별법에 의한 교육기관)
-                                </option>
-                                <option value="연구보조비">연구보조비</option>
                               </select>
                             </div>
                           </div>
@@ -595,7 +574,8 @@
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-primary">
+                      <button id="save-add-payment-item" type="button" class="btn btn-primary" 
+                      data-bs-dismiss="modal">
                         <i class="bi bi-save pe-2"></i>저장
                       </button>
                       <button
@@ -638,7 +618,7 @@
                       <th scope="col">사용여부</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="payment-item-body">
                     <tr class="dd">
                       <th scope="row">
                         <input
@@ -733,451 +713,6 @@
                       </th>
                       <td><a href="#" class="link-primary">직책수당</a></td>
                       <td></td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td></td>
-                      <td class="text-end">0</td>
-                      <td></td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td></td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td></td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td></td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td></td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td></td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td></td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td></td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td></td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
-                      <td class="text-end">0</td>
-                      <td>
-                        <div
-                          class="form-check form-switch d-flex justify-content-center"
-                        >
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            role="switch"
-                            id="use-status"
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="select-payment-item"
-                        />
-                      </th>
-                      <td><a href="#" class="link-primary">직책수당</a></td>
-                      <td class="text-center">
-                        <i class="bi bi-check align-middle"></i>
-                      </td>
                       <td class="text-end">0</td>
                       <td class="text-center">
                         <i class="bi bi-check align-middle"></i>
@@ -1861,15 +1396,6 @@
 
                 <button class="save-btn"><i class="bi bi-save"></i>저장</button>
               </div>
-            </div>
-            <div
-              class="tab-pane fade"
-              id="statutory-number-calculation-tab-pane"
-              role="tabpanel"
-              aria-labelledby="statutory-number-calculation-tab"
-              tabindex="0"
-            >
-              법정수 산정
             </div>
           </div>
         </div>
