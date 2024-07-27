@@ -29,6 +29,10 @@
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
+<!-- jquery-ui -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- jquery-ui css -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script type="text/javascript" src="salary_setting.js"></script>
   </head>
   <body>
@@ -404,7 +408,7 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="payment-item"
+                      id="search-payment-item"
                       placeholder="항목명을 입력하세요."
                     />
                   </div>
@@ -488,7 +492,7 @@
                               name="add-fixed-allowance"
                               id="add-fixed-allowance-true"
                               name="add-fixed-allowance"
-                              value="true"
+                              value=true
                             />해당
                           </div>
                           <div class="form-check col-auto ps-5">
@@ -498,7 +502,7 @@
                               name="add-fixed-allowance"
                               id="add-fixed-allowance-false"
                               name="add-fixed-allowance"
-                              value="false"
+                              value=false
                             />해당안함
                           </div>
                         </div>
@@ -566,7 +570,8 @@
                                 type="text"
                                 class="form-control"
                                 id="tax-free-limit"
-                                disabled
+                                name="tax-free-limit"
+                                readonly
                               />
                             </div>
                           </div>
