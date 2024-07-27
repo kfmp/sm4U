@@ -204,6 +204,15 @@
       "taxFree": false,
       "taxFreeLimit": null,
       "isUsed": true
+    },
+    {
+      "id": "3c81",
+      "name": "3241",
+      "fixedAllowance": false,
+      "amount": "123",
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
     }
   ],
   "deductibleItems": [
@@ -248,6 +257,42 @@
       "name": "결근공제",
       "price": 0,
       "isUsed": false
+    },
+    {
+      "id": "df66",
+      "name": "공제",
+      "price": "1000000",
+      "isUsed": true
+    },
+    {
+      "id": "fe78",
+      "name": "공제2",
+      "price": "200000",
+      "isUsed": true
+    },
+    {
+      "id": "e61c",
+      "name": "ef",
+      "price": "234",
+      "isUsed": true
+    },
+    {
+      "id": "8348",
+      "name": "adw",
+      "price": "2131",
+      "isUsed": true
+    },
+    {
+      "id": "3585",
+      "name": "ㄹㅁㄷㄹ",
+      "price": "13124",
+      "isUsed": true
+    },
+    {
+      "id": "10fc",
+      "name": "ㄹㅁㅈㅂ",
+      "price": "132",
+      "isUsed": true
     }
   ]
 }
