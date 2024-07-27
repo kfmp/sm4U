@@ -151,8 +151,17 @@
           <div>
             <div class="pay-doc-due-day">
               <p class="fw-semibold">지급예정일 :</p>
-              <input type="date" class="form-control pay-doc-top-date" />
-              <button class="btn btn-outline-dark btn-submit">전송</button>
+              <input
+                type="date"
+                class="form-control pay-doc-top-date"
+                id="change-date"
+              />
+              <button
+                class="btn btn-outline-dark btn-submit"
+                id="change-date-submit"
+              >
+                전송
+              </button>
             </div>
           </div>
 
@@ -183,52 +192,7 @@
                 <th scope="col">미지급 급여</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row" class="w-10">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="check-input"
-                  />
-                </th>
-                <td><span class="badge text-bg-primary">작성중</span></td>
-                <td data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  노승우
-                </td>
-                <td>개발</td>
-                <td>부장</td>
-                <td>2023-07-01</td>
-                <td>2024-08-10</td>
-                <td>5,000,000</td>
-                <td>851,700</td>
-                <td>4,148,300</td>
-                <td>4,148,300</td>
-              </tr>
-              <tr>
-                <th scope="row" class="w-10">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="check-input"
-                  />
-                </th>
-                <td><span class="badge text-bg-primary">작성중</span></td>
-                <td data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  유재원
-                </td>
-                <td>개발</td>
-                <td>부장</td>
-                <td>2023-07-01</td>
-                <td>2024-08-10</td>
-                <td>5,000,000</td>
-                <td>851,700</td>
-                <td>4,148,300</td>
-                <td>4,148,300</td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
           </table>
         </div>
 

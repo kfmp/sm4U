@@ -11,6 +11,7 @@ const initEventListeners = () => {
   $(window).on('load', handleInitLoad);
   $('#allcheck-input').on('click', handleAllCheck);
   $('#today-date').on('change', handleDateChange);
+  $('#change-date-submit').on('click', handleScheduledDateClick);
 };
 
 /**
@@ -115,7 +116,6 @@ const printPayrollDisplay = ({ employees }) => {
  * @param {Object} payroll - 급여 데이터
  */
 const printPayrollList = ({ employees }) => {
-  console.log(employees);
   const tbody = $('#payroll-table tbody').empty();
 
   const listEls = employees
@@ -153,7 +153,9 @@ const printPayrollList = ({ employees }) => {
                 <td>${departments || '정보없음'}</td>
                 <td>${position || '정보없음'}</td>
                 <td>${hrieDate || '정보없음'}</td>
-                <td>${scheduledPaymentDate || '정보없음'}</td>
+                <td id="scheduled-payment-date">${
+                  scheduledPaymentDate || '정보없음'
+                }</td>
                 <td>${totalPayment.toLocaleString() || '정보없음'}</td>
                 <td>${totalDeduction.toLocaleString() || '정보없음'}</td>
                 <td>${paymentAmount.toLocaleString() || '정보없음'}</td>
@@ -282,6 +284,20 @@ const getEmployeeList = () => {
       },
     });
   });
+};
+
+// 지급 예정일 수정하기
+const handleScheduledDateClick = () => {
+  const selectedDate = $('#change-date').val();
+  const checkedCheckboxes = $('tr input[type=checkbox]:checked');
+
+  checkedCheckboxes.each(function (index, item) {
+    const trEl = $(item).closest('tr');
+    trEl.find('#scheduled-payment-date').text(selectedDate);
+  });
+
+  // 체크된 요소들 체크 해제 시키기
+  checkedCheckboxes.prop('checked', false);
 };
 
 /**
