@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "<br/>\r <p align=\"middle\">\r   <img width=\"150px;\" src=\"./public/images/readme-logo.svg\"/>\r </p>\r <h1 align=\"middle\"></h1>\r <p align=\"middle\">Vanilla JS로 구현 하는 급여 관리 시스템</p>\r <h1 align=\"middle\"></h1>",
   "devDependencies": {
     "@babel/cli": "^7.24.8",
     "@babel/core": "^7.24.9",

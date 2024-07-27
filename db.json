@@ -1,29 +1,29 @@
 {
   "todos": [
     {
-      "id": 1,
+      "id": "1",
       "content": "HTML",
       "completed": true
     },
     {
-      "id": 2,
+      "id": "2",
       "content": "CSS",
       "completed": false
     },
     {
-      "id": 3,
+      "id": "3",
       "content": "Javascript",
       "completed": true
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Lee",
       "role": "developer"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Kim",
       "role": "designer"
     },
@@ -31,6 +31,268 @@
       "id": "admin",
       "name": "No",
       "pw": "1234"
+    }
+  ],
+  "paymentItems": [
+    {
+      "id": "1",
+      "name": "기본급",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": "2",
+      "name": "고정초과근무수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": true,
+      "taxFreeLimit": 2100000,
+      "isUsed": false
+    },
+    {
+      "id": "3",
+      "name": "초과근무수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": false
+    },
+    {
+      "id": "4",
+      "name": "주휴수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": false
+    },
+    {
+      "id": "5",
+      "name": "차량지원금",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": true,
+      "taxFreeLimit": 200000,
+      "isUsed": true
+    },
+    {
+      "id": "6",
+      "name": "보상휴가수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": false
+    },
+    {
+      "id": "7",
+      "name": "출산전후휴가수당",
+      "fixedAllowance": true,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": "8",
+      "name": "휴업수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": false
+    },
+    {
+      "id": "9",
+      "name": "식비",
+      "fixedAllowance": true,
+      "amount": 100000,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": "10",
+      "name": "자녀보육수당",
+      "fixedAllowance": false,
+      "amount": 100000,
+      "taxFree": true,
+      "taxFreeLimit": 200000,
+      "isUsed": true
+    },
+    {
+      "id": "11",
+      "name": "직책수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": "12",
+      "name": "상여금",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": "13",
+      "name": "미사용연차수당",
+      "fixedAllowance": true,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": false
+    },
+    {
+      "id": "ff54",
+      "name": "추가3",
+      "fixedAllowance": false,
+      "amount": "4364",
+      "taxFree": true,
+      "taxFreeLimit": "200000",
+      "isUsed": true
+    },
+    {
+      "id": "e220",
+      "name": "자유",
+      "fixedAllowance": false,
+      "amount": "34324",
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": "f112",
+      "name": "추가5",
+      "fixedAllowance": true,
+      "amount": "34134",
+      "taxFree": true,
+      "taxFreeLimit": "200000",
+      "isUsed": true
+    },
+    {
+      "id": "13e5",
+      "name": "추가7",
+      "fixedAllowance": false,
+      "amount": "34523",
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": "87f6",
+      "name": "추가10",
+      "fixedAllowance": false,
+      "amount": "334122",
+      "taxFree": true,
+      "taxFreeLimit": "200000",
+      "isUsed": true
+    },
+    {
+      "id": "dcc3",
+      "name": "추가11",
+      "fixedAllowance": false,
+      "amount": "234565",
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": "3c81",
+      "name": "3241",
+      "fixedAllowance": false,
+      "amount": "123",
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    }
+  ],
+  "deductibleItems": [
+    {
+      "id": "1",
+      "name": "건강보험",
+      "price": 0,
+      "isUsed": true
+    },
+    {
+      "id": "2",
+      "name": "국민연금",
+      "price": 0,
+      "isUsed": true
+    },
+    {
+      "id": "3",
+      "name": "고용보험",
+      "price": 0,
+      "isUsed": true
+    },
+    {
+      "id": "4",
+      "name": "특별소득공제",
+      "price": 0,
+      "isUsed": false
+    },
+    {
+      "id": "5",
+      "name": "개인연금저축공제",
+      "price": 0,
+      "isUsed": false
+    },
+    {
+      "id": "6",
+      "name": "식대공제",
+      "price": 0,
+      "isUsed": true
+    },
+    {
+      "id": "7",
+      "name": "결근공제",
+      "price": 0,
+      "isUsed": false
+    },
+    {
+      "id": "df66",
+      "name": "공제",
+      "price": "1000000",
+      "isUsed": true
+    },
+    {
+      "id": "fe78",
+      "name": "공제2",
+      "price": "200000",
+      "isUsed": true
+    },
+    {
+      "id": "e61c",
+      "name": "ef",
+      "price": "234",
+      "isUsed": true
+    },
+    {
+      "id": "8348",
+      "name": "adw",
+      "price": "2131",
+      "isUsed": true
+    },
+    {
+      "id": "3585",
+      "name": "ㄹㅁㄷㄹ",
+      "price": "13124",
+      "isUsed": true
+    },
+    {
+      "id": "10fc",
+      "name": "ㄹㅁㅈㅂ",
+      "price": "132",
+      "isUsed": true
     }
   ]
 }
