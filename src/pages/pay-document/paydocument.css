@@ -274,6 +274,7 @@ tbody::-webkit-scrollbar-thumb {
   height: 32px;
   font-size: 14px;
   width: 200px;
+  text-align: right;
 }
 
 .w-100px {
@@ -283,5 +284,5 @@ tbody::-webkit-scrollbar-thumb {
 .modal-body {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }

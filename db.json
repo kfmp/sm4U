@@ -1,36 +1,189 @@
 {
-  "todos": [
+  "employees": [
     {
-      "id": 1,
-      "content": "HTML",
-      "completed": true
+      "id": 1000,
+      "tenure": "재직",
+      "name": "김상학",
+      "departments": "개발부",
+      "position": "사원",
+      "hrieDate": "2023-07-11",
+      "endDate": null,
+      "annualSalary": null,
+      "salary": null,
+      "bank": null,
+      "bankcount": null,
+      "numberOfChildren": null,
+      "smallBusinessReductionRate": null,
+      "dorunorlNationalReductionRate": null,
+      "dorunorlHireReductionRate": null,
+      "byeAccount": null
     },
     {
-      "id": 2,
-      "content": "CSS",
-      "completed": false
+      "id": 1001,
+      "tenure": "재직",
+      "name": "장원",
+      "departments": "개발부",
+      "position": "사원",
+      "hrieDate": "2023-05-11",
+      "endDate": null,
+      "annualSalary": "3600000",
+      "salary": "2600000",
+      "bank": "우리은행",
+      "bankcount": "355-0076-47418-13",
+      "numberOfChildren": "2",
+      "smallBusinessReductionRate": "20",
+      "dorunorlNationalReductionRate": "20",
+      "dorunorlHireReductionRate": "20",
+      "byeAccount": "344-0076-4718-13"
     },
     {
-      "id": 3,
-      "content": "Javascript",
-      "completed": true
+      "id": 1003,
+      "tenure": "휴직",
+      "name": "송예림",
+      "departments": "영업부",
+      "position": "사원",
+      "hrieDate": "2022-07-11",
+      "endDate": null,
+      "annualSalary": "3600000",
+      "salary": "2600000",
+      "bank": "우리은행",
+      "bankcount": "355-0076-47418-13",
+      "numberOfChildren": "2",
+      "smallBusinessReductionRate": "20",
+      "dorunorlNationalReductionRate": "20",
+      "dorunorlHireReductionRate": "20",
+      "byeAccount": "344-0076-4718-13"
     }
   ],
-  "users": [
+  "payroll": [
     {
       "id": 1,
-      "name": "Lee",
-      "role": "developer"
+      "createdDate": "2024-05-10",
+      "employees": [
+        {
+          "id": 1000,
+          "status": "이체완료",
+          "name": "김상학",
+          "departments": "개발부",
+          "position": "사원",
+          "hrieDate": "2023-07-11",
+          "scheduledPaymentDate": "2024-06-20",
+          "totalPayment": 5000000,
+          "totalDeduction": 851700,
+          "paymentAmount": 4148300,
+          "unPaymentAmount": 0
+        },
+        {
+          "id": 1001,
+          "status": "이체완료",
+          "name": "장원",
+          "departments": "개발부",
+          "position": "사원",
+          "hrieDate": "2023-07-11",
+          "scheduledPaymentDate": "2024-06-20",
+          "totalPayment": 4500000,
+          "totalDeduction": 851700,
+          "paymentAmount": 3648300,
+          "unPaymentAmount": 0
+        },
+        {
+          "id": 1002,
+          "status": "이체완료",
+          "name": "송예림",
+          "departments": "영업부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-06-20",
+          "totalPayment": 4500000,
+          "totalDeduction": 851700,
+          "paymentAmount": 3648300,
+          "unPaymentAmount": 0
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Kim",
-      "role": "designer"
-    },
-    {
-      "id": "admin",
-      "name": "No",
-      "pw": "1234"
+      "createdDate": "2024-06-10",
+      "employees": [
+        {
+          "id": 1000,
+          "status": "이체완료",
+          "name": "김상학",
+          "departments": "개발부",
+          "position": "사원",
+          "hrieDate": "2023-07-11",
+          "scheduledPaymentDate": "2024-07-20",
+          "totalPayment": 5000000,
+          "totalDeduction": 851700,
+          "paymentAmount": 4148300,
+          "unPaymentAmount": 0
+        },
+        {
+          "id": 1001,
+          "status": "이체완료",
+          "name": "장원",
+          "departments": "개발부",
+          "position": "사원",
+          "hrieDate": "2023-07-11",
+          "scheduledPaymentDate": "2024-07-20",
+          "totalPayment": 4500000,
+          "totalDeduction": 851700,
+          "paymentAmount": 3648300,
+          "unPaymentAmount": 0
+        },
+        {
+          "id": 1002,
+          "status": "이체완료",
+          "name": "송예림",
+          "departments": "영업부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-07-20",
+          "totalPayment": 4500000,
+          "totalDeduction": 851700,
+          "paymentAmount": 3648300,
+          "unPaymentAmount": 0
+        },
+        {
+          "id": 1003,
+          "status": "이체완료",
+          "name": "원승언",
+          "departments": "개발부",
+          "position": "사원",
+          "hrieDate": "2023-07-11",
+          "scheduledPaymentDate": "2024-07-20",
+          "totalPayment": 5000000,
+          "totalDeduction": 851700,
+          "paymentAmount": 4148300,
+          "unPaymentAmount": 0
+        },
+        {
+          "id": 1004,
+          "status": "이체완료",
+          "name": "유재원",
+          "departments": "개발부",
+          "position": "사원",
+          "hrieDate": "2023-07-11",
+          "scheduledPaymentDate": "2024-07-20",
+          "totalPayment": 4500000,
+          "totalDeduction": 851700,
+          "paymentAmount": 3648300,
+          "unPaymentAmount": 0
+        },
+        {
+          "id": 1005,
+          "status": "이체완료",
+          "name": "윤채원",
+          "departments": "영업부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-07-20",
+          "totalPayment": 4500000,
+          "totalDeduction": 851700,
+          "paymentAmount": 3648300,
+          "unPaymentAmount": 0
+        }
+      ]
     }
   ]
 }
