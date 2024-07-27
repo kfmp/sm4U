@@ -36,6 +36,7 @@ function handleDateChange() {
   // 유효성 검사
   if (!isValidDate(selectedDate)) {
     console.error('유효하지 않은 날짜 형식입니다.');
+    return;
   }
 
   // ⭐ if(오늘 날짜랑 같다면, 초기화하는 그거 호출하고 return하기)
@@ -290,6 +291,11 @@ const getEmployeeList = () => {
 const handleScheduledDateClick = () => {
   const selectedDate = $('#change-date').val();
   const checkedCheckboxes = $('tr input[type=checkbox]:checked');
+
+  if (!isValidDate(selectedDate)) {
+    console.error('유효하지 않은 날짜 형식입니다.');
+    return;
+  }
 
   checkedCheckboxes.each(function (index, item) {
     const trEl = $(item).closest('tr');
