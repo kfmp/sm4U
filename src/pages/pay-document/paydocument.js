@@ -71,7 +71,7 @@ function handleDetailClick() {
     repaymentOfStudentLoans,
     totalPayment,
     totalDeduction,
-  } = employees.find((emp) => emp.id === parseInt(empId));
+  } = employees.find((emp) => emp.id == empId);
 
   $('#modal-name').val(name); // 사원명
   $('#modal-departments').val(departments); // 부서
@@ -127,7 +127,7 @@ function handleDateChange() {
   }
 
   // ⭐ if(오늘 날짜랑 같다면, 초기화하는 그거 호출하고 return하기)
-  if (selectedDate === '2024-07-28') {
+  if (selectedDate === '2024-07-29') {
     handleInitLoad();
     return;
   }
@@ -232,18 +232,16 @@ const printPayrollList = ({ employees }) => {
                     id="check-input-${id}"
                   />
                 </th>
-                <td><span class="badge ${statusClass}">${
-          status || '작성중'
-        }</span></td>
+                <td><span class="badge ${statusClass}">${status || '작성중'
+          }</span></td>
                 <td data-bs-toggle="modal" data-bs-target="#exampleModal" data-emp-id=${id} class="name">
                   ${name || '정보없음'}
                 </td>
                 <td>${departments || '정보없음'}</td>
                 <td>${position || '정보없음'}</td>
                 <td>${hrieDate || '정보없음'}</td>
-                <td id="scheduled-payment-date">${
-                  scheduledPaymentDate || '정보없음'
-                }</td>
+                <td id="scheduled-payment-date">${scheduledPaymentDate || '정보없음'
+          }</td>
                 <td>${totalPayment.toLocaleString() || '정보없음'}</td>
                 <td>${totalDeduction.toLocaleString() || '정보없음'}</td>
                 <td>${paymentAmount.toLocaleString() || '정보없음'}</td>

@@ -113,7 +113,7 @@ closeBtn.addEventListener('click', function () {
 // 결재 요청 완료 알림
 var btnPrimary = document.querySelector('#btn-access');
 btnPrimary.addEventListener('click', function () {
-  window.alert('결재 요청 완료!');
+  localStorage.setItem('activeNav', '/src/pages/home/home.html')
 });
 
 //결재 요청 버튼 클릭 후 메인 페이지로 이동
