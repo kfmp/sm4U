@@ -269,44 +269,59 @@ const getCurrnetDate = () => {
 
 // 세금 계산
 const calculateTax = (emp) => {
-  const basicPay = emp.salary; // 기본급
-  const overtimePay = 100000; // 연장 근로 수당
-  const nightWorkAllowance = 100000; // 야간 근로 수당
+  const { salary, numberOfChildren, hasSpouse } = emp;
 
-  // 식대, 차량지원금, 육아수당, 명절 상여금
-  const foodExpenses = 100000;
-  const vehicleSupportExpenses = 100000;
-  const childcareAllowance = 100000; // 육아수당은 numberOfChildren에 따라 달라짐
-  const holidayBonus = 100000;
+  // 연봉에서 비과세 금액을 제외한 과세 소득 계산
+  const taxableIncome = parseInt(salary);  // parseInt 적용
 
-  // TODO: 24년 사회보험 요율표 불러오기 API
-  const earnedIncomeTax = 100000; // 근로소득세
-  const earnedLocalIncomeTax = 100000; // 근로지방소득세
-  const nationalPension = 100000; // 국민연금
-  const healthInsurance = 100000; // 건강보험
-  const longTermCareInsurance = 100000; // 장기요양보험
-  const employmentInsurance = 100000; // 고용보험
-  const repaymentOfStudentLoans = 100000; // 학자금 상환
+  // 동적으로 근로소득세와 지방소득세 계산
+  const earnedIncomeTax = parseInt(calculateIncomeTax(taxableIncome, numberOfChildren, hasSpouse));
+  const earnedLocalIncomeTax = parseInt(earnedIncomeTax * 0.1);  // 지방 소득세는 근로소득세의 10%
 
+  const overtimePay = parseInt(100000);  // 연장 근로 수당
+  const nightWorkAllowance = parseInt(100000);  // 야간 근로 수당
+  const foodExpenses = parseInt(100000);  // 식대
+  const vehicleSupportExpenses = parseInt(100000);  // 차량 지원금
+  const childcareAllowance = parseInt(100000 * (numberOfChildren ? 1 : 0));  // 육아수당
+  const holidayBonus = parseInt(100000);  // 명절 상여금
+
+  const nationalPension = parseInt(salary * 0.045);  // 국민연금
+  const healthInsurance = parseInt(salary * 0.03545);  // 건강보험
+  const longTermCareInsurance = parseInt(healthInsurance * 0.1295);  // 장기요양보험
+  const employmentInsurance = parseInt(salary * 0.009);  // 고용보험
+  const repaymentOfStudentLoans = parseInt(100000);  // 학자금 상환
+
+  const totalPayment = parseInt(salary + overtimePay + nightWorkAllowance + foodExpenses + vehicleSupportExpenses + childcareAllowance + holidayBonus);
+  const totalDeduction = parseInt(earnedIncomeTax + earnedLocalIncomeTax + nationalPension + healthInsurance + longTermCareInsurance + employmentInsurance + repaymentOfStudentLoans);
+  const paymentAmount = parseInt(totalPayment - totalDeduction);
+  console.log('paymentAmount ' + parseInt(paymentAmount));
+  console.log(typeof paymentAmount);
   const scheduledPaymentDate = '2024-08-20';
-  const totalPayment =
-    basicPay +
-    overtimePay +
-    nightWorkAllowance +
-    foodExpenses +
-    vehicleSupportExpenses +
-    holidayBonus;
-  const totalDeduction =
-    earnedIncomeTax +
-    earnedLocalIncomeTax +
-    nationalPension +
-    healthInsurance +
-    longTermCareInsurance +
-    employmentInsurance +
-    repaymentOfStudentLoans;
-  const paymentAmount = totalPayment - totalDeduction;
-  const unPaymentAmount = paymentAmount;
 
+  const unPaymentAmount = parseInt(paymentAmount);
+  console.log('unPaymentAmount ' + unPaymentAmount);
+
+  console.log({
+
+    overtimePay,
+    nightWorkAllowance,
+    foodExpenses,
+    vehicleSupportExpenses,
+    childcareAllowance,
+    holidayBonus,
+    earnedIncomeTax,
+    earnedLocalIncomeTax,
+    nationalPension,
+    healthInsurance,
+    longTermCareInsurance,
+    employmentInsurance,
+    repaymentOfStudentLoans,
+    scheduledPaymentDate,
+    totalPayment,
+    totalDeduction,
+    paymentAmount,
+    unPaymentAmount,
+  });
   return {
     ...emp,
     overtimePay,
@@ -328,6 +343,36 @@ const calculateTax = (emp) => {
     paymentAmount,
     unPaymentAmount,
   };
+};
+
+
+
+
+// 근로소득세 계산 함수
+const calculateIncomeTax = (annualSalary, numberOfChildren, hasSpouse) => {
+  let baseTax = 0;
+
+  // 연간 과세소득에 따른 기본 세금 계산
+  if (annualSalary <= 100_000_000) {
+    baseTax = annualSalary * 0.06; // 10,000,000원 이하 구간에 대한 세율 6%
+  } else if (annualSalary <= 140_000_000) {
+    baseTax = 6_000_000 + (annualSalary - 100_000_000) * 0.35 * 0.98; // 10,000,000 ~ 14,000,000 구간에 대한 세율 35%
+  } else if (annualSalary <= 280_000_000) {
+    baseTax = 6_000_000 + 1_372_000 + (annualSalary - 140_000_000) * 0.38 * 0.98; // 14,000,000 ~ 28,000,000 구간에 대한 세율 38%
+  } else if (annualSalary <= 300_000_000) {
+    baseTax = 6_000_000 + 1_372_000 + 6_585_600 + (annualSalary - 280_000_000) * 0.40; // 28,000,000 ~ 30,000,000 구간에 대한 세율 40%
+  } else if (annualSalary <= 450_000_000) {
+    baseTax = 6_000_000 + 1_372_000 + 6_585_600 + 7_369_600 + (annualSalary - 300_000_000) * 0.42; // 30,000,000 ~ 45,000,000 구간에 대한 세율 42%
+  } else {
+    baseTax = 6_000_000 + 1_372_000 + 6_585_600 + 7_369_600 + 13_369_600 + (annualSalary - 450_000_000) * 0.45; // 45,000,000 초과 구간에 대한 세율 45%
+  }
+
+  // 자녀 및 배우자 공제 적용
+  const childDeduction = 1_500_000 * numberOfChildren; // 자녀 1인당 연 1,500,000원 공제
+  const spouseDeduction = hasSpouse ? 1_500_000 : 0; // 배우자 공제 연 1,500,000원
+
+  let tax = baseTax - (childDeduction + spouseDeduction); // 연간 공제 적용
+  return Math.max(tax, 0); // 세금은 음수가 될 수 없음
 };
 
 const handleInitLoad = async () => {
