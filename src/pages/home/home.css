@@ -108,11 +108,11 @@
 }
 
 .line-graph {
-  height: 49%;
+  height: 60%;
 }
 
 .confirm-board {
-  height: 49%;
+  height: 38%;
 }
 
 #doughnutChart {
@@ -121,7 +121,8 @@
 }
 
 #lineChart {
-  height: 235px;
+  height: 260px;
+  padding-top: 20px;
 }
 
 .list {
@@ -171,7 +172,7 @@
 /*  */
 .list-body {
   overflow-y: scroll;
-  height: 200px;
+  height: 129px;
 }
 
 .list-body::-webkit-scrollbar {
@@ -239,4 +240,9 @@
 
 #lineChart2 {
   height: 235px;
+}
+
+#select-month-salary-graph{
+  margin-top: 0px;
+  margin-bottom: 15px;
 }
