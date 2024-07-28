@@ -26,7 +26,7 @@ class CommonNav extends HTMLElement {
           </div>
           <!-- 시스템 시간 -->
           <div class="common-nav-clock">
-            <h1 id="clock">16:28:30</h1>
+            <h1 id="clock"></h1>
             <span id="custom-date">2024-07-23(화)</span>
           </div>
           <!-- 네비게이션 바 -->
@@ -48,8 +48,7 @@ class CommonNav extends HTMLElement {
               <a class="common-nav-link" aria-current="page" href="#">급여 대장</a>
             </li>
             <li class="nav-item common-nav-item">
-              <span><i class="bi bi-pencil-square"></i></span>
-              <a class="common-nav-link" aria-current="page" href="#">상여 대장</a>
+              <span><i class="bi bi-pencil-square"></i></span> <a class="common-nav-link" aria-current="page" href="/src/pages/salary-management/bonusesDocument.html">상여 대장</a>
             </li>
             <li class="nav-item common-nav-item" data-path="/src/pages/salary_setting/salary_setting.html">
               <span><i class="bi bi-wrench-adjustable"></i></span>
@@ -82,7 +81,7 @@ class CommonNav extends HTMLElement {
       `url(${profileImg})`
     );
 
-    this.timer = setInterval(() => this.updateClock(), 1000);
+    this.timer = setInterval(() => this.updateClock(), 1);
     this.updateDate(); // 날짜 초기화
 
     $(this.shadowRoot.querySelector('.common-logout')).on('click', function () {
