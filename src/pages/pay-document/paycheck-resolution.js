@@ -150,6 +150,11 @@ $(function () {
     },
   });
 
+  /**
+   * 급여 데이터를 계산합니다.
+   * @param {Array<Object>} data - 급여 데이터 배열
+   * @returns {Object} 계산된 급여 데이터 객체
+   */
   const calculateAll = (data) => {
     return data.reduce(
       (
@@ -206,6 +211,10 @@ $(function () {
     );
   };
 
+  /**
+   * 급여 데이터를 페이지에 삽입합니다.
+   * @param {Object} calculatedData - 계산된 급여 데이터 객체
+   */
   const insertTemplate = ({
     cSalary,
     cOvertimePay,

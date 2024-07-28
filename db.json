@@ -134,13 +134,13 @@
       "salary": 2100000,
       "bank": "국민은행",
       "bankcount": "1234-56789",
-      "numberOfChildren": null,
+      "numberOfChildren": 2,
       "smallBusinessReductionRate": null,
       "dorunorlNationalReductionRate": null,
       "dorunorlHireReductionRate": null,
       "byeAccount": "",
       "classification": "정규",
-      "allFamily": null
+      "allFamily": 4
     },
     {
       "id": "1001",
@@ -675,80 +675,6 @@
     }
   ],
   "approvalWaiting": [],
-  "paymentItems": [
-    {
-      "id": "1",
-      "name": "기본급",
-      "fixedAllowance": false,
-      "amount": 0,
-      "taxFree": false,
-      "taxFreeLimit": null,
-      "isUsed": true
-    },
-    {
-      "id": "2",
-      "name": "연장근로수당",
-      "fixedAllowance": true,
-      "amount": 0,
-      "taxFree": false,
-      "taxFreeLimit": null,
-      "isUsed": false
-    },
-    {
-      "id": "3",
-      "name": "야간근로수당",
-      "fixedAllowance": true,
-      "amount": 0,
-      "taxFree": false,
-      "taxFreeLimit": null,
-      "isUsed": false
-    },
-    {
-      "id": "4",
-      "name": "주휴수당",
-      "fixedAllowance": false,
-      "amount": 0,
-      "taxFree": false,
-      "taxFreeLimit": null,
-      "isUsed": false
-    },
-    {
-      "id": "5",
-      "name": "차량지원금",
-      "fixedAllowance": false,
-      "amount": 200000,
-      "taxFree": true,
-      "taxFreeLimit": 200000,
-      "isUsed": true
-    },
-    {
-      "id": "6",
-      "name": "식대",
-      "fixedAllowance": false,
-      "amount": 200000,
-      "taxFree": true,
-      "taxFreeLimit": 200000,
-      "isUsed": true
-    },
-    {
-      "id": "7",
-      "name": "육아수당",
-      "fixedAllowance": false,
-      "amount": 200000,
-      "taxFree": true,
-      "taxFreeLimit": 200000,
-      "isUsed": true
-    },
-    {
-      "id": "8",
-      "name": "자격수당",
-      "fixedAllowance": false,
-      "amount": 200000,
-      "taxFree": true,
-      "taxFreeLimit": 200000,
-      "isUsed": true
-    }
-  ],
   "deductibleItems": [
     {
       "id": "1",
