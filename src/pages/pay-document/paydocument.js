@@ -12,7 +12,62 @@ const initEventListeners = () => {
   $('#allcheck-input').on('click', handleAllCheck);
   $('#today-date').on('change', handleDateChange);
   $('#change-date-submit').on('click', handleScheduledDateClick);
+  $('#payroll-table tbody').on('click', '.name', handleDetailClick);
 };
+
+/**.
+ * 상세 지급 조회 함수(모달창)
+ */
+function handleDetailClick() {
+  const empId = $(this).data('emp-id');
+  const {
+    name,
+    departments,
+    salary,
+    overtimePay,
+    nightWorkAllowance,
+    foodExpenses,
+    vehicleSupportExpenses,
+    childcareAllowance,
+    holidayBonus,
+    earnedIncomeTax,
+    earnedLocalIncomeTax,
+    nationalPension,
+    healthInsurance,
+    longTermCareInsurance,
+    employmentInsurance,
+    repaymentOfStudentLoans,
+    totalPayment,
+    totalDeduction,
+  } = employees.find((emp) => emp.id === parseInt(empId));
+
+  $('#modal-name').val(name); // 사원명
+  $('#modal-departments').val(departments); // 부서
+  $('#modal-total-payment').val(totalPayment.toLocaleString()); // 지급항목 합계
+  $('#modal-salary').val(salary.toLocaleString()); // 기본급
+  $('#modal-overtime-pay').val(overtimePay.toLocaleString()); // 연장근로수당
+  $('#modal-nightwork-allowance').val(nightWorkAllowance.toLocaleString()); // 야간근로수당
+  $('#modal-food-expenses').val(foodExpenses.toLocaleString()); // 식대
+  $('#modal-vehicle-support-expenses').val(
+    vehicleSupportExpenses.toLocaleString()
+  ); // 차량지원금
+  $('#modal-children-allowance').val(childcareAllowance.toLocaleString()); // 육아수당
+  $('#modal-holiday-bonus').val(holidayBonus.toLocaleString()); // 명절상여금
+  $('#modal-total-deduction').val(totalDeduction.toLocaleString()); // 공제항목합계
+  $('#modal-earned-income-tax').val(earnedIncomeTax.toLocaleString()); // 근로소득세
+  $('#modal-earned-local-income-tax').val(
+    earnedLocalIncomeTax.toLocaleString()
+  ); // 근로지방소득세
+  $('#modal-national-pension').val(nationalPension.toLocaleString()); // 국민연금
+  $('#modal-health-insurance').val(healthInsurance.toLocaleString()); // 건강보험
+  $('#modal-longterm-care-insurance').val(
+    longTermCareInsurance.toLocaleString()
+  ); // 장기요양보험
+  $('#modal-employment-insurance').val(employmentInsurance.toLocaleString()); // 고용보험
+  $('#modal-repayment-of-student-loans').val(
+    repaymentOfStudentLoans.toLocaleString()
+  ); // 학자금상환
+}
 
 /**
  * 체크박스 전체 선택 처리 함수
@@ -148,7 +203,7 @@ const printPayrollList = ({ employees }) => {
                 <td><span class="badge ${statusClass}">${
           status || '작성중'
         }</span></td>
-                <td data-bs-toggle="modal" data-bs-target="#exampleModal" data-emp-id=${id}>
+                <td data-bs-toggle="modal" data-bs-target="#exampleModal" data-emp-id=${id} class="name">
                   ${name || '정보없음'}
                 </td>
                 <td>${departments || '정보없음'}</td>
