@@ -49,7 +49,7 @@ class CommonNav extends HTMLElement {
             </li>
             <li class="nav-item common-nav-item">
               <span><i class="bi bi-pencil-square"></i></span>
-              <a class="common-nav-link" aria-current="page" href="#">상여 대장</a>
+              <a class="common-nav-link" aria-current="page" href="/src/pages/salary-management/bonusesDocument.html">상여 대장</a>
             </li>
             <li class="nav-item common-nav-item" data-path="/src/pages/salary_setting/salary_setting.html">
               <span><i class="bi bi-wrench-adjustable"></i></span>

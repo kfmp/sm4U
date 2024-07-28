@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sm4U</title>
+
     <link rel="icon" href="/public/images/favicon.png" />
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css" />
+    <link rel="stylesheet" href="/src/pages/salary-management/testTree.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,7 +23,14 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/src/components/common/common.css" />
+
+    <link
+      rel="stylesheet"
+      href="/src/pages/salary-management/salary-management-foreach.css"
+    />
+
     <link rel="stylesheet" href="salary-management-foreach.css" />
+
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -30,6 +41,32 @@
       src="https://kit.fontawesome.com/515785cd79.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.4.6/sumoselect.min.css"
+      integrity="sha512-vU7JgiHMfDcQR9wyT/Ye0EAAPJDHchJrouBpS9gfnq3vs4UGGE++HNL3laUYQCoxGLboeFD+EwbZafw7tbsLvg=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.4.6/jquery.sumoselect.min.js"
+      integrity="sha512-QrFuYvQdMYt9Ux8Npgtqy1fnaN7qsNA68M0iFnyXwdrARBjLxrJrlbkdqrsmx7KThIagBgEdEDdWtEHm7cC2ag=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/pages/salary-management/salary-management-foreach.js"></script>
+    <script src="/src/pages/salary-management/userDetailModle.js"></script>
+    <link rel="stylesheet" href="userDetailModle.css" />
+
+    <script
+      src="https://kit.fontawesome.com/515785cd79.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/pages/salary-management/mini.js"></script>
   </head>
   <body>
     <common-header></common-header>
@@ -74,16 +111,18 @@
                   aria-label="Default select example"
                   style="width: 164px; height: 38px"
                 >
-                  <option selected>재직</option>
-                  <option value="1">휴직</option>
-                  <option value="2">퇴직</option>
+                  <option selected value="재직">재직</option>
+                  <option value="휴직">휴직</option>
+                  <option value="퇴직">퇴직</option>
                 </select>
                 <input
                   type="text"
-                  id="a1"
-                  class="form-control"
-                  style="width: 200px; height: 38px"
+                  id="departments2"
                   placeholder="부서"
+                  readonly
+                  style="cursor: pointer"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
                 />
 
                 <input
@@ -119,208 +158,466 @@
                       <th>계좌번호</th>
                     </tr>
                   </thead>
-                  <div class="table-list-wrap">
-                    <tbody>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td><span class="warning">!</span></td>
-                        <td><span class="warning">!</span></td>
-                        <td><span class="warning">!</span></td>
-                        <td><span class="warning">!</span></td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                      <tr>
-                        <td>재직</td>
-                        <td><a href="#">김상학</a></td>
-                        <td>경리회계T/F</td>
-                        <td>대리</td>
-                        <td>2022-06-01</td>
-                        <td>-</td>
-                        <td>정규</td>
-                        <td>50,000,000</td>
-                        <td>3,500,000</td>
-                        <td>우리은행</td>
-                        <td>355-0076-4718-13</td>
-                      </tr>
-                    </tbody>
-                  </div>
+
+                  <tbody></tbody>
                 </table>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="employeeDetailsModal"
+      tabindex="-1"
+      aria-labelledby="employeeDetailsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="employeeDetailsModalLabel">
+              급여 상세 설정
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="modal-wrap">
+              <div class="row userDetailImg-wrap">
+                <!-- 프로필 이미지 -->
+                <div class="col-2 userDetailImg-wrap">
+                  <img
+                    src="/public/images/profile.png"
+                    alt="User Image"
+                    class="img-fluid"
+                  />
+                </div>
+                <!-- 사용자 정보 -->
+                <div class="col-10">
+                  <div class="row">
+                    <div class="col-md-4 userDetail-top-wrap">
+                      <div>
+                        <p>
+                          <strong>직원구분: </strong>
+                        </p>
+                        <input
+                          type="text"
+                          value="정규"
+                          disabled
+                          id="classification"
+                        />
+                      </div>
+                      <div>
+                        <p><strong>입사일자:</strong></p>
+                        <input
+                          type="text"
+                          value=" 2012-12-01"
+                          disabled
+                          id="hrieDate"
+                        />
+                      </div>
+                      <div>
+                        <p><strong>ID:</strong></p>
+                        <input type="text" value="daou01" disabled />
+                      </div>
+                      <div>
+                        <p><strong>이메일:</strong></p>
+                        <input
+                          type="text"
+                          value="daou01@digitalnnc.com"
+                          disabled
+                        />
+                      </div>
+                      <div>
+                        <p><strong>메신저:</strong></p>
+                        <input type="text" value="" disabled />
+                      </div>
+                    </div>
+                    <div class="col-md-4 userDetail-top-wrap">
+                      <div>
+                        <p><strong>부서:</strong></p>
+                        <input type="text" value="관리부" disabled />
+                      </div>
+                      <div>
+                        <p><strong>사원번호:</strong></p>
+                        <input type="text" value="직원 번호" disabled id="id" />
+                      </div>
+                      <div>
+                        <p><strong>직원번호</strong></p>
+                        <input type="text" value="" disabled />
+                      </div>
+                      <div>
+                        <p><strong>휴대전화:</strong></p>
+                        <input type="text" value="" disabled />
+                      </div>
+                      <div>
+                        <p><strong>부서번호:</strong></p>
+                        <input type="text" value="" disabled />
+                      </div>
+                    </div>
+                    <div class="col-md-4 userDetail-top-wrap">
+                      <div>
+                        <p><strong>사원명:</strong></p>
+                        <input type="text" value="" id="name" disabled />
+                      </div>
+                      <div>
+                        <p><strong>직위:</strong></p>
+                        <input type="text" value="" disabled id="position" />
+                      </div>
+
+                      <div>
+                        <p><strong>직책:</strong></p>
+                        <input type="text" value="" disabled />
+                      </div>
+                      <div>
+                        <p><strong>직급:</strong></p>
+                        <input type="text" value="" id="tenure" disabled />
+                      </div>
+                      <div>
+                        <p><strong>FAX:</strong></p>
+                        <input type="text" value="FAX번호" disabled />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 아래는 모달 -->
+            <div class="row userDetail-additional-wrap">
+              <!-- 직원의 추가적인 상세 정보 -->
+              <div class="row userDetail-additional-first">
+                <p><strong>급여유형</strong></p>
+                <p><strong>월급</strong></p>
+                <p><strong>소득공제부양자</strong></p>
+                <p><strong>학자금 상환여부</strong></p>
+
+                <p><strong>중소기업취업소득세감면</strong></p>
+                <p><strong>중소기업소득세감면기간</strong></p>
+                <p><strong>두루누리 적용여부</strong></p>
+                <p><strong>급여은행</strong></p>
+                <p><strong>퇴직연금은행</strong></p>
+              </div>
+              <div class="row userDetail-additional-second">
+                <input type="text" value="급여" class="form-control" disabled />
+                <input type="text" class="form-control" id="annualSalary" />
+                <input
+                  type="text"
+                  value="정규"
+                  class="form-control"
+                  style="width: 50%"
+                  id="allFamily"
+                />
+                <p
+                  style="
+                    margin-bottom: 0px;
+                    display: inline;
+                    width: 50%;
+                    padding: 8px 12px;
+                  "
+                >
+                  명
+                </p>
+                <select class="form-select">
+                  <option value="" selected>아니오</option>
+                  <option value="">예</option>
+                </select>
+                <select class="form-select">
+                  <option value="">아니오</option>
+                  <option value="" selected>예</option>
+                </select>
+                <input type="date" class="form-control detailDate" />
+                ~
+                <input type="date" class="form-control detailDate" />
+                <select class="form-select">
+                  <option value="">아니오</option>
+                  <option value="" selected>예</option>
+                </select>
+                <select class="form-select" id="bank">
+                  <option value="국민은행" selected>국민은행</option>
+                  <option value="신한은행">신한은행</option>
+                  <option value="하나은행">하나은행</option>
+                  <option value="우리은행">우리은행</option>
+                </select>
+                <select class="form-select">
+                  <option value="" selected>국민은행</option>
+                  <option value="">신한은행</option>
+                  <option value="">하나은행</option>
+                  <option value="">우리은행</option>
+                </select>
+              </div>
+              <div class="row userDetail-additional-therd">
+                <p><strong>연봉</strong></p>
+                <p><strong>고정수당</strong></p>
+                <p><strong>자녀수</strong></p>
+                <p><strong>중소기기업감면적용</strong></p>
+                <p><strong>중소기업감면율</strong></p>
+                <p><strong>두루누리 국민연금감면율</strong></p>
+                <p><strong>두루누리 고용보험 감면율</strong></p>
+                <p><strong>급여계좌</strong></p>
+                <p><strong>퇴직연금계좌</strong></p>
+              </div>
+              <div class="row userDetail-additional-four">
+                <input
+                  type="text"
+                  value="36,000,000"
+                  class="form-control"
+                  id="salary"
+                />
+                <select class="form-select" id="optSelect">
+                  <option value="예" selected>예</option>
+                  <option value="아니요">아니요</option>
+                </select>
+                <select class="form-select" id="selectBox" multiple disabled>
+                  <option value="식대">식대</option>
+                  <option value="차량유지비">차량유지비</option>
+                  <option value="자녀수당">자녀수당</option>
+                  <option value="특별수당">특별수당</option>
+                </select>
+
+                <input
+                  type="number"
+                  class="form-control"
+                  style="width: 50%; height: 40.56px"
+                  id="numberOfChildren"
+                />
+                <p
+                  style="
+                    margin-bottom: 0px;
+                    display: inline;
+                    width: 50%;
+                    padding: 8px 12px;
+                  "
+                >
+                  명
+                </p>
+                <select
+                  class="form-select"
+                  id="optSelect"
+                  style="display: block; margin-right: 21%"
+                >
+                  <option value="" selected>예</option>
+                  <option value="">아니요</option>
+                </select>
+                <input
+                  type="number"
+                  class="form-control"
+                  style="width: 50%; height: 40.56px; display: block"
+                  max="10"
+                  id="smallBusinessReductionRate"
+                />
+                <p
+                  style="
+                    margin-bottom: 0px;
+                    display: inline;
+                    width: 50%;
+                    padding: 8px 12px;
+                  "
+                >
+                  %
+                </p>
+                <input
+                  type="number"
+                  class="form-control"
+                  style="width: 50%; height: 40.56px; display: block"
+                  max="10"
+                  id="dorunorlNationalReductionRate"
+                />
+                <p
+                  style="
+                    margin-bottom: 0px;
+                    display: inline;
+                    width: 50%;
+                    padding: 8px 12px;
+                  "
+                >
+                  %
+                </p>
+                <input
+                  type="number"
+                  class="form-control"
+                  style="width: 50%; height: 40.56px; display: block"
+                  max="10"
+                  id="dorunorlHireReductionRate"
+                />
+                <p
+                  style="
+                    margin-bottom: 0px;
+                    display: inline;
+                    width: 50%;
+                    padding: 8px 12px;
+                  "
+                >
+                  %
+                </p>
+
+                <input
+                  type="text"
+                  value=""
+                  class="form-control"
+                  placeholder="계좌번호를 입력해주세요"
+                  id="bankcount"
+                />
+                <input
+                  type="text"
+                  value=""
+                  class="form-control"
+                  placeholder="계좌번호를 입력해주세요"
+                  id="byeAccount"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="saveChanges">
+              저장
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              취소
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">부서선택</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container treeContainer">
+              <!-- 왼쪽 div: 스크롤을 포함하는 트리 구조 -->
+              <div
+                class="treeWrap border shadow-sm rounded position: sticky; z-index: 0; top: 0;"
+                style="height: 290px; padding: 10px; margin: 0 auto"
+              >
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="이름/아이디/부서/직위/직책"
+                  />
+                  <i
+                    class="fa-solid fa-magnifying-glass"
+                    style="padding-right: 10px; margin: 0"
+                  ></i>
+                </div>
+                <ul class="tree">
+                  <li>
+                    <input type="checkbox" id="exec" />
+                    <label for="exec">임원실</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="tech" />
+                    <label for="tech">기술연구소</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="dev" />
+                    <label for="dev">개발팀</label>
+                    <ul>
+                      <li>
+                        <a href="#" class="employee"
+                          ><span class="icon"></span>김상학 차장</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="employee"
+                          ><span class="icon"></span>노승우 상무</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="employee"
+                          ><span class="icon"></span>송예림 과장</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="employee"
+                          ><span class="icon"></span>황철원 부장</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="proj" checked />
+                    <label for="proj">프로젝트그룹</label>
+                    <ul>
+                      <li>
+                        <input type="checkbox" id="law" />
+                        <label for="law">법무관리T/F</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="acc" />
+                        <label for="acc">경리회계T/F</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="acc-dmnc" />
+                        <label for="acc-dmnc">경리회계(DMNC)</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="ops" checked />
+                        <label for="ops">운영팀</label>
+                        <ul>
+                          <li>
+                            <a href="#" class="employee"
+                              ><span class="icon"></span>박찬욱 차장</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="employee"
+                              ><span class="icon"></span>김다우 상무</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="employee"
+                              ><span class="icon"></span>마정웅 과장</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#" class="employee"
+                              ><span class="icon"></span>강준혁 부장</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
@@ -331,6 +628,5 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="/src/index.js"></script>
   </body>
 </html>

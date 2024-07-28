@@ -1,7 +1,129 @@
 {
+  "bonuses": [
+    {
+      "id": "1001",
+      "tenure": "작성중",
+      "name": "김철수",
+      "departments": "개발부",
+      "position": "주임",
+      "hrieDate": "2021-07-01",
+      "moneyMaybe": "2024-08-10",
+      "moneyGood": null,
+      "moneyBye": null,
+      "realMoney": null
+    },
+    {
+      "id": "1002",
+      "tenure": "작성중",
+      "name": "박영희",
+      "departments": "마케팅부",
+      "position": "차장",
+      "hrieDate": "2019-06-15",
+      "moneyMaybe": "2024-08-10",
+      "moneyGood": 700000,
+      "moneyBye": 35000,
+      "realMoney": 665000
+    },
+    {
+      "id": "1003",
+      "tenure": "작성중",
+      "name": "이민정",
+      "departments": "인사부",
+      "position": "사원",
+      "hrieDate": "2023-05-21",
+      "moneyMaybe": "2024-08-10",
+      "moneyGood": 500000,
+      "moneyBye": 25000,
+      "realMoney": 475000
+    },
+    {
+      "id": "1004",
+      "tenure": "작성중",
+      "name": "최대한",
+      "departments": "기획부",
+      "position": "과장",
+      "hrieDate": "2018-04-11",
+      "moneyMaybe": "2024-08-10",
+      "moneyGood": 600000,
+      "moneyBye": 30000,
+      "realMoney": 570000
+    },
+    {
+      "id": "1005",
+      "tenure": "작성중",
+      "name": "정수민",
+      "departments": "재무부",
+      "position": "대리",
+      "hrieDate": "2022-01-09",
+      "moneyMaybe": "2024-08-10",
+      "moneyGood": 450000,
+      "moneyBye": 22500,
+      "realMoney": 427500
+    },
+    {
+      "id": "1006",
+      "tenure": "작성중",
+      "name": "한아름",
+      "departments": "영업부",
+      "position": "사원",
+      "hrieDate": "2020-12-03",
+      "moneyMaybe": "2024-08-10",
+      "moneyGood": 350000,
+      "moneyBye": 17500,
+      "realMoney": 332500
+    },
+    {
+      "id": "1007",
+      "tenure": "작성중",
+      "name": "오준석",
+      "departments": "연구개발부",
+      "position": "사원",
+      "hrieDate": "2021-08-20",
+      "moneyMaybe": "2024-08-10",
+      "moneyGood": 520000,
+      "moneyBye": 26000,
+      "realMoney": 494000
+    },
+    {
+      "id": "1008",
+      "tenure": "작성중",
+      "name": "윤지영",
+      "departments": "서비스부",
+      "position": "주임",
+      "hrieDate": "2022-03-15",
+      "moneyMaybe": "2024-08-10",
+      "moneyGood": 410000,
+      "moneyBye": 20500,
+      "realMoney": 389500
+    },
+    {
+      "id": "1009",
+      "tenure": "작성중",
+      "name": "송지훈",
+      "departments": "디자인부",
+      "position": "차장",
+      "hrieDate": "2022-07-07",
+      "moneyMaybe": "2024-08-10",
+      "moneyGood": 660000,
+      "moneyBye": 33000,
+      "realMoney": 627000
+    },
+    {
+      "id": "1010",
+      "tenure": "작성중",
+      "name": "노승우",
+      "departments": "생산부",
+      "position": "부장",
+      "hrieDate": "2017-02-18",
+      "moneyMaybe": "2024-08-10",
+      "moneyGood": 800000,
+      "moneyBye": 40000,
+      "realMoney": 760000
+    }
+  ],
   "employees": [
     {
-      "id": 1000,
+      "id": "1000",
       "tenure": "재직",
       "name": "김상학",
       "departments": "개발부",
@@ -10,16 +132,18 @@
       "endDate": null,
       "annualSalary": 45000000,
       "salary": 3200000,
-      "bank": null,
-      "bankcount": null,
+      "bank": "국민은행",
+      "bankcount": "",
       "numberOfChildren": null,
       "smallBusinessReductionRate": null,
       "dorunorlNationalReductionRate": null,
       "dorunorlHireReductionRate": null,
-      "byeAccount": null
+      "byeAccount": "",
+      "classification": "",
+      "allFamily": null
     },
     {
-      "id": 1001,
+      "id": "1001",
       "tenure": "재직",
       "name": "장원",
       "departments": "개발부",
@@ -37,7 +161,7 @@
       "byeAccount": "344-0076-4718-13"
     },
     {
-      "id": 1002,
+      "id": "1002",
       "tenure": "휴직",
       "name": "송예림",
       "departments": "영업부",
@@ -55,7 +179,7 @@
       "byeAccount": "344-0076-4718-13"
     },
     {
-      "id": 1003,
+      "id": "1003",
       "tenure": "재직",
       "name": "원승언",
       "departments": "개발부",
@@ -73,7 +197,7 @@
       "byeAccount": "344-0076-4718-13"
     },
     {
-      "id": 1004,
+      "id": "1004",
       "tenure": "재직",
       "name": "유재원",
       "departments": "개발부",
@@ -91,7 +215,7 @@
       "byeAccount": "344-0076-4718-13"
     },
     {
-      "id": 1005,
+      "id": "1005",
       "tenure": "재직",
       "name": "윤채원",
       "departments": "영업부",
@@ -111,7 +235,7 @@
   ],
   "payroll": [
     {
-      "id": 1,
+      "id": "1",
       "createdDate": "2024-05-10",
       "employees": [
         {
@@ -156,7 +280,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "createdDate": "2024-06-10",
       "employees": [
         {
@@ -242,7 +366,7 @@
   ],
   "approvalWaiting": [
     {
-      "id": 1,
+      "id": "1",
       "createDate": "2024-07-28",
       "scheduledDate": "2024-08-13",
       "data": [
@@ -606,6 +730,15 @@
       "name": "3241",
       "fixedAllowance": false,
       "amount": "123",
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": "e1ba",
+      "name": "하이",
+      "fixedAllowance": false,
+      "amount": "on",
       "taxFree": false,
       "taxFreeLimit": null,
       "isUsed": true
