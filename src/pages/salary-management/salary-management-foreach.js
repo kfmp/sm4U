@@ -43,6 +43,7 @@ $(function () {
         });
 
         employees.forEach(function (employee) {
+            console.log(typeof employee.id);
             $table.append(
                 `<tr>
                     <td>${employee.tenure}</td>
@@ -116,15 +117,16 @@ $(function () {
             name: $('#name').val(),
             tenure: $('#tenure').val(),
             bankcount: $('#bankcount').val(),
-            salary: $('#salary').val(),
-            annualSalary: $('#annualSalary').val(),
+            salary: parseInt($('#salary').val()),
+            annualSalary: parseInt($('#annualSalary').val()),
             bank: $('#bank').val(),
             byeAccount: $('#byeAccount').val(),
-            allFamily: $('#allFamily').val(),
-            numberOfChildren: $('#numberOfChildren').val()
+            allFamily: parseInt($('#allFamily').val()),
+            numberOfChildren: parseInt($('#numberOfChildren').val())
         };
 
         //console.log('Updated Data:', updatedData); 
+
 
         $.ajax({
             url: `http://localhost:3000/employees/${parseInt($('#id').val())}`,

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sm4U - 로그인</title>
+    <title>sm4U</title>
     <link rel="icon" href="/public/images/favicon.png" />
     <link rel="stylesheet" href="/src/components/common/reset.css" />
-    <link rel="stylesheet" href="/src/pages/login/css/login.css" />
+    <link rel="stylesheet" href="/src/pages/login/login.css" />
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -14,17 +14,11 @@
     ></script>
   </head>
   <body>
-    <common-header></common-header>
-    <common-nav></common-nav>
     <div class="login-container">
       <div class="logo-area">
         <div class="logo"></div>
       </div>
-      <form
-        class="login-form"
-        action="/src/pages/login/loginInsepct.html"
-        method="post"
-      >
+      <form class="login-form" method="post">
         <input
           type="text"
           placeholder="아이디를 입력해주세요."
@@ -43,34 +37,7 @@
         <button type="submit" class="login-button">로그인</button>
       </form>
     </div>
-    <script>
-      $(function () {
-        $('form').submit(function (event) {
-          event.preventDefault(); // 기본 폼 제출 방지
 
-          $.ajax({
-            url: 'http://127.0.0.1:3000/users',
-            type: 'get', // get만됨 jsonServer가 받는 방식이 다른가? 학인필요
-            success: function (data) {
-              const userId = $('input[name="userId"]').val();
-              const userPw = $('input[name="userPw"]').val();
-
-              const user = data.find(
-                (user) => user.id === userId && user.pw === userPw
-              );
-              if (user) {
-                console.log('Authentication successful for user:', user.name);
-                location.href = '/';
-              } else {
-                $('#error-message').text('비밀번호가 틀렸습니다.').show();
-              }
-            },
-            error: function (xhr, status, error) {
-              console.error('Error: ' + error);
-            },
-          });
-        });
-      });
-    </script>
+    <script src="/src/pages/login/login.js"></script>
   </body>
 </html>
