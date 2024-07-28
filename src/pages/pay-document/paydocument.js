@@ -2,7 +2,6 @@ let employees = [];
 
 $(function () {
   getCurrnetDate();
-  // getEmployeeList();
   initEventListeners();
 });
 
@@ -13,7 +12,40 @@ const initEventListeners = () => {
   $('#today-date').on('change', handleDateChange);
   $('#change-date-submit').on('click', handleScheduledDateClick);
   $('#payroll-table tbody').on('click', '.name', handleDetailClick);
+  $('#btn-approval').on('click', handleApprovalClick);
 };
+
+function handleApprovalClick() {
+  let id = 1;
+  const createDate = $('#today-date').val();
+  const scheduledDate = $('#change-date').val();
+
+  const data = {
+    id,
+    createDate,
+    scheduledDate,
+    data: [...employees],
+  };
+
+  $.ajax({
+    type: 'POST',
+    url: 'http://localhost:3000/approvalWaiting',
+    contentType: 'application/json',
+    data: JSON.stringify(data),
+    success: function () {
+      console.log('전송완료');
+    },
+    error: function (xhr, status, err) {
+      console.error('[AJAX_handleApprovalClick] ' + status + err);
+    },
+  });
+
+  $(location).attr(
+    'href',
+    `/src/pages/pay-document/paycheck-resolution.html?id=${id}`
+  );
+  ++id;
+}
 
 /**.
  * 상세 지급 조회 함수(모달창)

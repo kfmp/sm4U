@@ -60,12 +60,19 @@
                 id="today-date"
               />
               <div class="pay-doc-top-control">
-                <button type="button" class="submit-btn">급여 전자 결재</button>
+                <button
+                  type="button"
+                  class="submit-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#confirmModal"
+                >
+                  급여 전자 결재
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- 카드리스트 목록 -->
+          <!-- 카드 목록 -->
           <div class="card-wrap">
             <div class="card w-18">
               <div class="card-header">급여 대상자</div>
@@ -113,7 +120,7 @@
             </div>
           </div>
 
-          <!-- 직급리스트 검색 -->
+          <!-- 필터링 조회 -->
           <div class="pay-doc-search">
             <p class="fw-semibold">직원 구분 :</p>
             <select
@@ -147,7 +154,7 @@
 
           <hr />
 
-          <!-- 아래 지급예정일 검색 -->
+          <!-- 지급예정일 -->
           <div>
             <div class="pay-doc-due-day">
               <p class="fw-semibold">지급예정일 :</p>
@@ -165,7 +172,7 @@
             </div>
           </div>
 
-          <!-- 테이블 -->
+          <!-- 급여대장 테이블 -->
           <table
             class="table table-striped table-hover table-box"
             id="payroll-table"
@@ -196,6 +203,7 @@
           </table>
         </div>
 
+        <!-- 상세 모달창 -->
         <div
           class="modal fade"
           id="exampleModal"
@@ -404,6 +412,48 @@
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 전자 결재 컨펌창 -->
+        <div
+          class="modal fade"
+          id="confirmModal"
+          tabindex="-1"
+          aria-labelledby="confirmModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="confirmModalLabel">
+                  급여지급 결의
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <span style="color: tomato; font-weight: 600"
+                  >전자결재 요청을 하시겠습니까?</span
+                >
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="btn-approval" class="btn btn-dark">
+                  전자결재 요청
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  취소
+                </button>
               </div>
             </div>
           </div>
