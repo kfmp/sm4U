@@ -1,0 +1,308 @@
+.main-body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 1430px;
+  height: 100%;
+}
+
+.main-body-wrap {
+  padding: 20px 0px;
+  width: 100%;
+  height: 95%;
+}
+
+.pay-doc-content-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pay-doc-content-title div {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.pay-doc-content-title small {
+  margin-left: 30px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.pay-doc-wrap {
+  display: flex;
+  flex-grow: 0.25;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pay-doc-wrap > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.pay-doc-top-date {
+  width: inherit;
+  height: 32px;
+}
+
+.pay-doc-top-control {
+  font-weight: 600;
+  font-size: 14.5px;
+}
+
+.pay-doc-top-control div span {
+  margin: 0px 20px;
+}
+
+.status-btn {
+  border: 2px solid rgb(86, 171, 255);
+  height: 32px;
+  border-radius: 15px;
+  font-size: 14px;
+  width: 80px;
+  color: rgb(86, 171, 255);
+  font-weight: 600;
+  background-color: white;
+}
+
+.submit-btn {
+  background-color: #1c2335;
+  height: 32px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  width: 150px;
+}
+
+.pay-doc-top-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+#home-tab-pane > div > div.pay-doc-wrap > p {
+  margin-bottom: 0;
+}
+
+.card-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 130px;
+  background-color: white;
+}
+
+.card {
+  box-shadow: 0 0 4px #333;
+}
+
+.w-18 {
+  width: 18%;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.txt-right {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.card-body p {
+  font-size: 14px;
+}
+
+.card-body span {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* 사원검색 */
+.pay-doc-search {
+  margin-top: 40px;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pay-doc-search .form-select {
+  height: 32px;
+  line-height: 20px;
+}
+
+.pay-doc-search p {
+  margin-bottom: 0;
+}
+
+#departments {
+  width: 200px;
+  height: 32px;
+
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-image: var(--bs-form-select-bg-img),
+    var(--bs-form-select-bg-icon, none);
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#departments2 {
+  width: 200px;
+  height: 32px;
+
+  --bs-form-select-bg-img: url('/public/images/sitemap-solid.svg');
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-image: var(--bs-form-select-bg-img),
+    var(--bs-form-select-bg-icon, none);
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-search {
+  height: 32px;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pay-doc-due-day {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.pay-doc-due-day p {
+  margin-bottom: 0;
+}
+
+.pay-doc-due-day > * {
+  margin-right: 10px;
+}
+
+.btn-submit {
+  height: 32px;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.table-box {
+  margin-top: 10px;
+}
+
+.table-box tbody {
+  display: block;
+  max-height: 350px;
+  overflow-y: scroll;
+}
+.table-box thead,
+.table-box tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody::-webkit-scrollbar {
+  width: 6px;
+  background-color: #eee;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: #7c869b;
+  border-radius: 10px;
+}
+
+.table-box th.w-10,
+.table-box td.w-10 {
+  width: 50px;
+}
+
+/* 모달창  */
+.cmt-wrap {
+  display: flex;
+}
+
+.cmt-wrap > div {
+  margin-right: 15px;
+}
+
+.cmt-wrap div {
+  font-size: 14px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+}
+
+.input-label {
+  font-size: 14px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+}
+
+.custom-input {
+  height: 32px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.w-100px {
+  width: 100px;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#autocomplete-results {
+  border: 1px solid #dedede;
+  border-top: none;
+  position: absolute; /* 문서 흐름에서 제거하여 다른 요소들을 밀지 않음 */
+  top: 100%; /* 입력 필드 바로 아래에 위치 */
+  left: 72.7%; /* 왼쪽 정렬 */
+  width: 200px;
+  z-index: 1000; /* 다른 요소들 위에 표시 */
+  display: none; /* 기본적으로 숨김 */
+  background-color: #fff; /* 배경색 추가 */
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #dedede;
+}
+
+.autocomplete-item:hover {
+  background-color: #f2f2f2;
+}

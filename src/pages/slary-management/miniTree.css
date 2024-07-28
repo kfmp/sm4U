@@ -1,0 +1,108 @@
+.tree {
+  padding-top: 10px;
+  height: 240px;
+  border: 1px;
+  overflow-y: scroll;
+}
+
+.tree::-webkit-scrollbar {
+  width: 6px;
+  background-color: #eee;
+}
+
+.tree::-webkit-scrollbar-thumb {
+  background-color: #7c869b;
+  border-radius: 10px;
+}
+.treeWrap input {
+  width: 100%;
+}
+.tree,
+.tree ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
+.tree input[type='checkbox'] {
+  display: none;
+}
+.input-group {
+  display: flex;
+  align-items: center !important;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.input-icon {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url('/public/images/search.svg') no-repeat center;
+  background-size: contain;
+  margin: 0 10px;
+}
+.input-group input[type='text'] {
+  border: none;
+  outline: none;
+}
+
+.tree label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+}
+
+.tree label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 17px;
+  background-image: url('/public/images/sitemap-solid.svg'); /* 클리ㄱ전 이미지 */
+  background-size: cover;
+}
+
+.tree input[type='checkbox']:checked + label:before {
+  background-image: url('/public/images/sitemap-solid.svg'); /* 체크된이후 이미지 */
+}
+
+.tree input[type='checkbox']:not(:checked) ~ ul {
+  display: none;
+}
+
+.tree input[type='checkbox']:checked ~ ul {
+  display: block;
+}
+
+/* 링크 및 span 스타일 */
+.tree a,
+.tree span {
+  text-decoration: none;
+  color: black;
+  display: block; /* 블록 레벨 요소로 변경 */
+  padding-left: 25px; /* 레이블과 일치하는 패딩 */
+}
+
+.tree .icon {
+  display: inline-block; /* 인라인 블록 요소로 변경 */
+  width: 32px; /* 아이콘 너비 */
+  height: 32px; /* 아이콘 높이 */
+  margin-right: 5px; /* 오른쪽 마진 추가 */
+  background-image: url('/public/images/readme-logo.svg'); /* 사용자 아이콘 */
+  background-size: cover; /* 이미지 커버 설정 */
+  vertical-align: middle; /* 수직 정렬 */
+}
+
+.treeContainer {
+  padding-top: 10px;
+  height: 300px;
+}
+
+.treeContent {
+  padding-top: 10px;
+  height: 300px;
+}
+
+.treeContent td {
+  vertical-align: middle;
+}
