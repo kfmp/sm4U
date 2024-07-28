@@ -44,341 +44,419 @@
 
     <div class="main">
       <div class="main-body">
-        <div class="main-tab-wrap">
-          <div class="main-tab">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link active"
-                  id="home-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#home-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="home-tab-pane"
-                  aria-selected="true"
-                >
-                  급여 현황 조회
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="profile-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#profile-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="profile-tab-pane"
-                  aria-selected="false"
-                >
-                  상여 현황 조회
-                </button>
-              </li>
-            </ul>
+        <div class="main-body-wrap">
+          <div class="pay-doc-content-title">
+            <div>급여대장(작성)</div>
+            <small class="text-body-secondary">
+              직원들의 급여를 수정하거나 확인하며 전자결재를 통해 일마다
+              사원별로 처리현황을 확인할 수 있습니다.
+            </small>
           </div>
-        </div>
-
-        <div class="tab-content" id="myTabContent">
-          <div
-            class="tab-pane fade show active"
-            id="home-tab-pane"
-            role="tabpanel"
-            aria-labelledby="home-tab"
-            tabindex="0"
-            style="width: 1430px; margin: 0 auto"
-          >
-            <p class="pay-doc-content-title">
-              급여대장(작성)
-              <small class="text-body-secondary">
-                직원들의 급여를 수정하거나 확인하며 전자결재를 통해 일마다
-                사원별로 처리현황을 확인할 수 있습니다.
-              </small>
-            </p>
-            <div class="pay-doc-top-wrap">
-              <div class="pay-doc-wrap">
-                <input type="date" class="form-control pay-doc-top-date" />
-                <p>급여 | 지급(예정일):2024-09-10</p>
-                <button type="button" class="btn btn-info">작성중</button>
-                <button type="button" class="btn btn-primary">
+          <div class="pay-doc-top-wrap">
+            <div class="pay-doc-wrap">
+              <input
+                type="date"
+                class="form-control pay-doc-top-date"
+                id="today-date"
+              />
+              <div class="pay-doc-top-control">
+                <button
+                  type="button"
+                  class="submit-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#confirmModal"
+                >
                   급여 전자 결재
                 </button>
               </div>
-              <select
-                class="form-select form-select-sm pay-doc-top-button shadow"
-                aria-label="Small select example"
-                style="width: 200px"
-              >
-                <option selected>월별 급여 대장</option>
-                <option>상세 급여 대장</option>
-              </select>
-            </div>
-
-            <!-- 카드리스트 목록 -->
-            <div class="card-wrap">
-              <div class="card w-18">
-                <div class="card-header">급여 대상자</div>
-                <div class="card-body txt-right">
-                  <blockquote class="blockquote mb-0">
-                    <p><span>27</span> 명</p>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="card w-18">
-                <div class="card-header">세전 총 지급합계</div>
-                <div class="card-body txt-right">
-                  <blockquote class="blockquote mb-0">
-                    <p><span>371,821,266</span> 원</p>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="card w-18">
-                <div class="card-header">공제합계</div>
-                <div class="card-body txt-right">
-                  <blockquote class="blockquote mb-0">
-                    <p><span>132,855,725</span> 원</p>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="card w-18">
-                <div class="card-header">공제 후 지급액</div>
-                <div class="card-body txt-right">
-                  <blockquote class="blockquote mb-0">
-                    <p><span>10,603,500</span> 원</p>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="card w-18">
-                <div class="card-header">미지급 급여</div>
-                <div class="card-body txt-right">
-                  <blockquote class="blockquote mb-0">
-                    <p><span>10,603,500</span> 원</p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-
-            <!-- 직급리스트 검색 -->
-            <div class="pay-doc-search">
-              <p class="fw-semibold">직원 구분 :</p>
-              <select
-                class="form-select"
-                id="inlineFormSelectPref"
-                style="width: 180px"
-              >
-                <option selected>전체</option>
-              </select>
-              <p class="fw-semibold">직위 :</p>
-              <select
-                class="form-select"
-                id="inlineFormSelectPref"
-                style="width: 180px"
-              >
-                <option selected>전체</option>
-              </select>
-              <input type="text" id="departments2" placeholder="부서" />
-              <input
-                type="text"
-                id="departments"
-                name="departName"
-                placeholder="사원명을 검색하시오"
-              />
-
-              <button class="btn btn-light pay-doc-top-button btn-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                조회
-              </button>
-            </div>
-
-            <hr />
-
-            <!-- 아래 지급예정일 검색 -->
-            <div>
-              <div class="pay-doc-due-day">
-                <p class="fw-semibold">지급예정일 :</p>
-                <input type="date" class="form-control pay-doc-top-date" />
-                <button class="btn btn-light pay-doc-top-button">전송</button>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <table>
-                <thead>
-                  <tr>
-                    <th><input type="checkbox" /></th>
-                    <th>상태</th>
-                    <th>사원명</th>
-                    <th>부서</th>
-                    <th>직위</th>
-                    <th>입사일</th>
-                    <th>지급예정일</th>
-                    <th>지급금액</th>
-                    <th>공제액</th>
-                    <th>공제 후 지급액</th>
-                    <th>미지급 금액</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" checked /></td>
-                    <td><span class="badge bg-info">정상</span></td>
-                    <td><a href="#">노승우</a></td>
-                    <td>개발</td>
-                    <td>부장</td>
-                    <td>2023-07-01</td>
-                    <td>2024-08-10</td>
-                    <td>5,000,000</td>
-                    <td>851,700</td>
-                    <td>4,148,300</td>
-                    <td>4,148,300</td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </div>
-          <!--여기가 마지막이오  -->
+
+          <!-- 카드 목록 -->
+          <div class="card-wrap">
+            <div class="card w-18">
+              <div class="card-header">급여 대상자</div>
+              <div class="card-body txt-right">
+                <blockquote class="blockquote mb-0">
+                  <p><span id="display-emp-count">27</span> 명</p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="card w-18">
+              <div class="card-header">세전 총 지급합계</div>
+              <div class="card-body txt-right">
+                <blockquote class="blockquote mb-0">
+                  <p><span id="display-total-payment">371,821,266</span> 원</p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="card w-18">
+              <div class="card-header">공제합계</div>
+              <div class="card-body txt-right">
+                <blockquote class="blockquote mb-0">
+                  <p>
+                    <span id="display-total-deduction">132,855,725</span> 원
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="card w-18">
+              <div class="card-header">공제 후 지급액</div>
+              <div class="card-body txt-right">
+                <blockquote class="blockquote mb-0">
+                  <p><span id="display-payment-amount">10,603,500</span> 원</p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="card w-18">
+              <div class="card-header">미지급 급여</div>
+              <div class="card-body txt-right">
+                <blockquote class="blockquote mb-0">
+                  <p>
+                    <span id="display-no-payment-amount">10,603,500</span> 원
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <!-- 필터링 조회 -->
+          <div class="pay-doc-search">
+            <p class="fw-semibold">직원 구분 :</p>
+            <select
+              class="form-select"
+              id="inlineFormSelectPref"
+              style="width: 180px"
+            >
+              <option selected>전체</option>
+            </select>
+            <p class="fw-semibold">직위 :</p>
+            <select
+              class="form-select"
+              id="inlineFormSelectPref"
+              style="width: 180px"
+            >
+              <option selected>전체</option>
+            </select>
+            <input type="text" id="departments2" placeholder="부서" />
+            <input
+              type="text"
+              id="departments"
+              name="departName"
+              placeholder="사원명을 검색하시오"
+            />
+
+            <button class="btn btn-outline-dark btn-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              조회
+            </button>
+          </div>
+
+          <hr />
+
+          <!-- 지급예정일 -->
+          <div>
+            <div class="pay-doc-due-day">
+              <p class="fw-semibold">지급예정일 :</p>
+              <input
+                type="date"
+                class="form-control pay-doc-top-date"
+                id="change-date"
+              />
+              <button
+                class="btn btn-outline-dark btn-submit"
+                id="change-date-submit"
+              >
+                전송
+              </button>
+            </div>
+          </div>
+
+          <!-- 급여대장 테이블 -->
+          <table
+            class="table table-striped table-hover table-box"
+            id="payroll-table"
+          >
+            <thead>
+              <tr>
+                <th scope="col" class="w-10">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="allcheck-input"
+                  />
+                </th>
+                <th scope="col">상태</th>
+                <th scope="col">사원명</th>
+                <th scope="col">부서</th>
+                <th scope="col">직위</th>
+                <th scope="col">입사일</th>
+                <th scope="col">지급예정일</th>
+                <th scope="col">지급합계</th>
+                <th scope="col">공제합계</th>
+                <th scope="col">공제 후 지급액</th>
+                <th scope="col">미지급 급여</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <!-- 상세 모달창 -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-title" id="exampleModalLabel">
+                  <div class="cmt-wrap">
+                    <div>
+                      <div>사원명</div>
+                      <input
+                        type="text"
+                        value="노승우"
+                        class="form-control custom-input w-100px"
+                        disabled
+                        id="modal-name"
+                      />
+                    </div>
+                    <div>
+                      <div>부서</div>
+                      <input
+                        type="text"
+                        value="개발"
+                        class="form-control custom-input w-100px"
+                        id="modal-departments"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="basic-price">
+                  <div>
+                    <div class="input-label">지급항목 합계</div>
+                    <input
+                      type="text"
+                      value="7,500,000"
+                      class="form-control custom-input"
+                      id="modal-total-payment"
+                      disabled
+                    />
+                  </div>
+                  <hr />
+                  <div class="mb-3">
+                    <div class="input-label">기본급</div>
+                    <input
+                      type="text"
+                      value="5,000,000"
+                      class="form-control custom-input"
+                      id="modal-salary"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">연장근로수당</div>
+                    <input
+                      type="text"
+                      value="600,000"
+                      class="form-control custom-input"
+                      id="modal-overtime-pay"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">야간근로수당</div>
+                    <input
+                      type="text"
+                      value="500,000"
+                      class="form-control custom-input"
+                      id="modal-nightwork-allowance"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">식대</div>
+                    <input
+                      type="text"
+                      value="200,000"
+                      class="form-control custom-input"
+                      id="modal-food-expenses"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">차량지원금</div>
+                    <input
+                      type="text"
+                      value="200,000"
+                      class="form-control custom-input"
+                      id="modal-vehicle-support-expenses"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">육아수당</div>
+                    <input
+                      type="text"
+                      value="0"
+                      class="form-control custom-input"
+                      id="modal-children-allowance"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">명절상여금</div>
+                    <input
+                      type="text"
+                      value="0"
+                      class="form-control custom-input"
+                      id="modal-holiday-bonus"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="free-price">
+                  <div class="mb-3">
+                    <div class="input-label">공제항목 합계</div>
+                    <input
+                      type="text"
+                      value="1,354,300"
+                      class="form-control custom-input"
+                      id="modal-total-deduction"
+                      disabled
+                    />
+                  </div>
+                  <hr />
+                  <div class="mb-3">
+                    <div class="input-label">근로소득세</div>
+                    <input
+                      type="text"
+                      value="623,470"
+                      class="form-control custom-input"
+                      id="modal-earned-income-tax"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">근로지방소득세</div>
+                    <input
+                      type="text"
+                      value="62,340"
+                      class="form-control custom-input"
+                      id="modal-earned-local-income-tax"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">국민연금</div>
+                    <input
+                      type="text"
+                      value="70,740"
+                      class="form-control custom-input"
+                      id="modal-national-pension"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">건강보험</div>
+                    <input
+                      type="text"
+                      value="248,140"
+                      class="form-control custom-input"
+                      id="modal-health-insurance"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">장기요양보험</div>
+                    <input
+                      type="text"
+                      value="30,440"
+                      class="form-control custom-input"
+                      id="modal-longterm-care-insurance"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">고용보험</div>
+                    <input
+                      type="text"
+                      value="19,170"
+                      class="form-control custom-input"
+                      id="modal-employment-insurance"
+                      readonly
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-label">학자금상환</div>
+                    <input
+                      type="text"
+                      value="300,000"
+                      class="form-control custom-input"
+                      id="modal-repayment-of-student-loans"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 전자 결재 컨펌창 -->
+        <div
+          class="modal fade"
+          id="confirmModal"
+          tabindex="-1"
+          aria-labelledby="confirmModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="confirmModalLabel">
+                  급여지급 결의
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <span style="color: tomato; font-weight: 600"
+                  >전자결재 요청을 하시겠습니까?</span
+                >
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="btn-approval" class="btn btn-dark">
+                  전자결재 요청
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  취소
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -388,7 +466,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
-    <script type="module" src="/src/index.js"></script>
+    <script src="/src/pages/pay-document/paydocument.js"></script>
   </body>
 </html>
