@@ -34,10 +34,13 @@
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
-<!-- jquery-ui -->
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<!-- jquery-ui css -->
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- jquery-ui -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- jquery-ui css -->
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
     <script type="text/javascript" src="salary_setting.js"></script>
   </head>
   <body>
@@ -418,7 +421,11 @@
                     />
                   </div>
                   <div class="col-auto">
-                    <button id="btn-search-payment-item" type="submit" class="btn btn-outline-dark">
+                    <button
+                      id="btn-search-payment-item"
+                      type="submit"
+                      class="btn btn-outline-dark"
+                    >
                       <i class="bi bi-search"></i> 조회
                     </button>
                   </div>
@@ -497,7 +504,7 @@
                               name="add-fixed-allowance"
                               id="add-fixed-allowance-true"
                               name="add-fixed-allowance"
-                              value=true
+                              value="true"
                             />해당
                           </div>
                           <div class="form-check col-auto ps-5">
@@ -507,7 +514,7 @@
                               name="add-fixed-allowance"
                               id="add-fixed-allowance-false"
                               name="add-fixed-allowance"
-                              value=false
+                              value="false"
                             />해당안함
                           </div>
                         </div>
@@ -560,8 +567,7 @@
                                 aria-label="Default select example"
                                 id="tax-free-select"
                                 name="tax-free-select"
-                              >
-                              </select>
+                              ></select>
                             </div>
                           </div>
                           <div class="row p-2">
@@ -584,8 +590,12 @@
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button id="save-add-payment-item" type="button" class="btn btn-primary" 
-                      data-bs-dismiss="modal">
+                      <button
+                        id="save-add-payment-item"
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                      >
                         <i class="bi bi-save pe-2"></i>저장
                       </button>
                       <button
@@ -771,7 +781,11 @@
                     />
                   </div>
                   <div class="col-auto">
-                    <button id="btn-search-deduction-item" type="submit" class="btn btn-outline-dark">
+                    <button
+                      id="btn-search-deduction-item"
+                      type="submit"
+                      class="btn btn-outline-dark"
+                    >
                       <i class="bi bi-search"></i> 조회
                     </button>
                   </div>
@@ -804,22 +818,22 @@
               >
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <h1
-                        class="modal-title fs-5 fw-bold"
-                        id="add-deductible-item-modal-label"
-                      >
-                        공제항목 등록
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <form id="add-deduction-item-form">
+                    <form id="add-deduction-item-form">
+                      <div class="modal-header">
+                        <h1
+                          class="modal-title fs-5 fw-bold"
+                          id="add-deductible-item-modal-label"
+                        >
+                          공제항목 등록
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
                         <div class="row p-3">
                           <label
                             for="add-item-name"
@@ -852,21 +866,24 @@
                           </div>
                           <span class="col-auto ps-1 pt-2">원</span>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button id="save-add-deduction-item" type="submit" class="btn btn-primary">
-                        <i class="bi bi-save pe-2"></i>저장
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        <i class="bi bi-x-circle pe-2"></i>취소
-                      </button>
-                    </div>
-
-                  </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          id="save-add-deduction-item"
+                          type="submit"
+                          class="btn btn-primary"
+                        >
+                          <i class="bi bi-save pe-2"></i>저장
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          <i class="bi bi-x-circle pe-2"></i>취소
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -896,8 +913,7 @@
                       <th scope="col">사용여부</th>
                     </tr>
                   </thead>
-                  <tbody id="deduction-item-body">
-                  </tbody>
+                  <tbody id="deduction-item-body"></tbody>
                 </table>
               </div>
             </div>
@@ -964,6 +980,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="/src/index.js"></script>
+    <!-- <script type="module" src="/src/index.js"></script> -->
   </body>
 </html>

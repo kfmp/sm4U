@@ -27,6 +27,7 @@
     ></script>
     <script type="module" src="/src/components/common/common.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
   </head>
   <body>
     <common-header></common-header>
@@ -130,6 +131,16 @@
                     <div class="card h-100">
                       <div class="card-header">당월 급여 현황 그래프</div>
                       <div class="card-body">
+                        <!-- <div>
+                          <select
+                            id="select-month-salary-graph"
+                            class="form-select w-25"
+                            aria-label="Default select example"
+                          >
+                            <option selected value="salary">급여</option>
+                            <option value="beir">상여</option>
+                          </select>
+                        </div> -->
                         <blockquote class="blockquote mb-0">
                           <canvas id="doughnutChart"></canvas>
                         </blockquote>
@@ -141,9 +152,30 @@
                 <div class="right-side">
                   <!-- 라인 그래프  -->
                   <div class="line-graph">
-                    <div class="card h-100">
-                      <div class="card-header">월별 급여 추이 그래프</div>
+                    <div class="card">
+                      <div class="card-header">급여 추이 그래프</div>
                       <div class="card-body">
+                        <div class="row">
+                          <select
+                            id="select-salary-graph"
+                            class="col-auto form-select w-25 ms-3"
+                            aria-label="Default select example"
+                          >
+                            <option selected value="month">월별</option>
+                            <option value="year">연도별</option>
+                          </select>
+                          <select
+                            id="select-year"
+                            class="col-auto form-select w-25 ms-3"
+                            aria-label="Default select example"
+                          >
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option selected value="2024">2024</option>
+                          </select>
+                        </div>
                         <blockquote class="blockquote mb-0">
                           <canvas id="lineChart"></canvas>
                         </blockquote>
@@ -153,7 +185,7 @@
 
                   <!-- 결재 현황 목록 -->
                   <div class="confirm-board">
-                    <div class="card h-100">
+                    <div class="card">
                       <div class="card-header">결재 현황</div>
                       <div class="card-body">
                         <div class="list">
@@ -449,6 +481,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/src/pages/home/graph.js"></script>
-    <script type="module" src="/src/index.js"></script>
+    <!-- <script type="module" src="/src/index.js"></script> -->
   </body>
 </html>
