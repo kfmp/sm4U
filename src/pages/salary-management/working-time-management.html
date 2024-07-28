@@ -54,11 +54,8 @@
             <p>급여발생월</p>
             <input
               type="date"
-              id="salary-calender"
-              name="trip-start"
-              value="2024-07-24"
-              min="2024-01-01"
-              max="2028-12-31"
+              class="form-control pay-doc-top-date"
+              id="salary-management-calander"
             />
           </div>
         </div>
@@ -93,6 +90,7 @@
                 <input
                   type="text"
                   class="form-control"
+                  placeholder="15"
                   style="
                     width: 100px;
                     height: 38px;
@@ -112,6 +110,7 @@
                   aria-label="Default select example"
                   style="width: 85px; height: 38px; margin-top: 5px"
                 >
+                  <option value="korean" selected>23</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -133,7 +132,7 @@
                   <option value="19">19</option>
                   <option value="20">20</option>
                   <option value="21">21</option>
-                  <option value="22">22</option>
+                  <option value="23">23</option>
                   <option value="23">23</option>
                   <option value="24">24</option>
                   <option value="25">25</option>
@@ -205,6 +204,7 @@
                   </thead>
                   <div class="table-list-wrap">
                     <tbody>
+                      <!-- Repeated rows for dummy data -->
                       <tr>
                         <td>
                           <div class="form-check">
@@ -221,63 +221,397 @@
                             </label>
                           </div>
                         </td>
-                        <td><a href="#">김상학</a></td>
+                        <td><a href="#">송예림</a></td>
+                        <td>개발팀</td>
+                        <td>대리</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">황철원</a></td>
+                        <td>개발팀</td>
+                        <td>과장</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">노승우</a></td>
+                        <td>개발팀</td>
+                        <td>부장</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">박현지</a></td>
                         <td>경리회계T/F</td>
                         <td>대리</td>
-                        <td class="td-center-wrap">
-                          <input
-                            type="text"
-                            class="form-control"
-                            style="
-                              width: 100px;
-                              height: 38px;
-                              margin-top: 5px;
-                              margin-left: 50px;
-                            "
-                          />
-                        </td>
-                        <td class="td-center-wrap">-</td>
-                        <td class="td-center-wrap">
-                          <input
-                            type="text"
-                            class="form-control"
-                            style="
-                              width: 100px;
-                              height: 38px;
-                              margin-top: 5px;
-                              margin-left: 33px;
-                            "
-                          />
-                        </td>
-                        <td class="td-center-wrap">
-                          <input
-                            type="text"
-                            class="form-control"
-                            style="width: 100px; height: 38px; margin-top: 5px"
-                          />
-                        </td>
-                        <td class="td-center-wrap">
-                          <input
-                            type="text"
-                            class="form-control"
-                            style="width: 100px; height: 38px; margin-top: 5px"
-                          />
-                        </td>
-                        <td class="td-center-wrap">
-                          <input
-                            type="text"
-                            class="form-control"
-                            style="width: 100px; height: 38px; margin-top: 5px"
-                          />
-                        </td>
-                        <td class="td-center-wrap">
-                          <input
-                            type="text"
-                            class="form-control"
-                            style="width: 100px; height: 38px; margin-top: 5px"
-                          />
-                        </td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
                       </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">김현식</a></td>
+                        <td>경리회계T/F</td>
+                        <td>사원</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">노창현</a></td>
+                        <td>경리회계T/F</td>
+                        <td>과장</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">박범진</a></td>
+                        <td>운영팀</td>
+                        <td>사원</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">정명길</a></td>
+                        <td>운영팀</td>
+                        <td>대리</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">장원</a></td>
+                        <td>운영팀</td>
+                        <td>이사</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">김태호</a></td>
+                        <td>법무관리팀</td>
+                        <td>대리</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">김지연</a></td>
+                        <td>법무관리</td>
+                        <td>과장</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">김경민</a></td>
+                        <td>기술연구소</td>
+                        <td>과장</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault2"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault2"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">김대오</a></td>
+                        <td>기술연구소</td>
+                        <td>부장</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault3"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">박찬호</a></td>
+                        <td>경리회계팀</td>
+                        <td>과장</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">190:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">20:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault3"
+                            >
+                            </label>
+                          </div>
+                        </td>
+                        <td><a href="#">이은수</a></td>
+                        <td>경리회계팀</td>
+                        <td>사원</td>
+                        <td class="td-center-wrap">23</td>
+                        <td class="td-center-wrap">190:00:00</td>
+                        <td class="td-center-wrap">176:00:00</td>
+                        <td class="td-center-wrap">20:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                        <td class="td-center-wrap">00:00:00</td>
+                      </tr>
+                      <!-- Add more rows as needed -->
                     </tbody>
                   </div>
                 </table>
@@ -293,6 +627,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="/src/index.js"></script>
+    <script src="working-time-management.js"></script>
   </body>
 </html>

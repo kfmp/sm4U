@@ -10,10 +10,10 @@
   height: 50%;
   display: flex;
 }
-#salary-calender {
-  width: 130px;
-  height: 22px;
-  margin-top: 18px;
+#salary-management-calander {
+  width: 165px;
+  height: 40px;
+  margin-top: 5px;
 }
 .salary-management-head-title > p:nth-child(1) {
   font-weight: bold;
@@ -63,8 +63,6 @@
   font-size: 22px;
   margin-right: 20px;
   margin-top: 8px;
-}
-.detail-status-wrap1 {
 }
 
 .status-form-wrap {

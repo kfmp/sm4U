@@ -5,50 +5,412 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>급여 지급결의서</title>
     <link rel="stylesheet" href="paycheck-resolution.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
   </head>
+  <div id="modal-see-already" class="modal" style="display: none">
+    <span class="close">&times;</span>
+    <div id="modal-body"></div>
+  </div>
   <body>
-    <div class="container">
-      <header>
-        <h1>급여 지급결의서</h1>
-      </header>
-      <section class="info">
-        <div class="employee-info">
-          <label>기안자</label>
-          <span>홍길동</span>
+    <div class="link-wrap">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        결재요청
+      </button>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">결재 요청</h1>
+              <div>
+                <p>결재문서명</p>
+                <p>2024년 07월 지급결의 품의 건</p>
+              </div>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="modal-body" style="height: 100px">
+              결재 요청 하시겠습니까?
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="btn-access">
+                결재요청
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                취소
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="date-info">
-          <label>기안일</label>
-          <span>2024년 09월 01일</span>
-        </div>
-      </section>
-      <section class="salary-table">
-        <table>
-          <thead>
-            <tr>
-              <th>구분</th>
-              <th>금액</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>기본급</td>
-              <td>₩500,000</td>
-            </tr>
-            <tr>
-              <td>추가근로</td>
-              <td>₩100,000</td>
-            </tr>
-            <!-- 추가 행 필요 -->
-          </tbody>
-        </table>
-      </section>
-      <section class="total">
-        <span>총 급여액:</span>
-        <strong>₩600,000</strong>
-      </section>
-      <footer>
-        <p>작성자 서명: ___________________</p>
-      </footer>
+      </div>
+
+      <a href="#"> <i class="bi bi-box-arrow-in-down"></i>임시저장 </a>
+
+      <a href="#" id="preview"><i class="bi bi-eye"></i>미리보기 </a>
+
+      <a href="#" id="delete-approver-list">
+        <i class="bi bi-x-circle"></i>취소
+      </a>
+
+      <a href="#"> <i class="bi bi-info-circle"></i>결재 정보 </a>
+      <button id="download">
+        <i class="bi bi-filetype-pdf"></i>PDF다운로드
+      </button>
     </div>
+
+    <div class="container-wrap">
+      <div class="approver-tree-wrap">
+        <div class="tree">
+          <input type="checkbox" id="root" />
+          <label for="root"><strong>조직도</strong></label>
+          <ul>
+            <li>
+              <input type="checkbox" id="node1" />
+              <label for="node1"><strong>임원실</strong></label>
+              <ul>
+                <li><label class="lastTree">김상학 이사</label></li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" id="node2" />
+              <label for="node2"><strong>기술연구소</strong></label>
+              <ul>
+                <li>
+                  <label class="lastTree"
+                    ><i class="bi bi-file-person"></i>이재형 부장</label
+                  >
+                </li>
+                <li>
+                  <label class="lastTree"
+                    ><i class="bi bi-file-person"></i>김지은 부장</label
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" id="node3" />
+              <label for="node3"><strong>개발팀</strong></label>
+              <ul>
+                <li>
+                  <label class="lastTree"
+                    ><i class="bi bi-file-person"></i>박현수 대리</label
+                  >
+                </li>
+                <li>
+                  <label class="lastTree"
+                    ><i class="bi bi-file-person"></i>이성민 사원</label
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" id="node4" />
+              <label for="node4"><strong>프로젝트룸</strong></label>
+              <ul>
+                <li>
+                  <input type="checkbox" id="node41" />
+                  <label for="node41"><strong>법무관리팀</strong></label>
+                  <ul>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>김민수 사원</label
+                      >
+                    </li>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>박소연 사원</label
+                      >
+                    </li>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>이수진 과장</label
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <input type="checkbox" id="node42" />
+                  <label for="node42"><strong>경리회계팀</strong></label>
+                  <ul>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>정현우 부장</label
+                      >
+                    </li>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>최윤정 대리</label
+                      >
+                    </li>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>한지수 과장</label
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <input type="checkbox" id="node43" />
+                  <label for="node43"><strong>운영팀</strong></label>
+                  <ul>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>박찬욱 부장</label
+                      >
+                    </li>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>김현식 차장</label
+                      >
+                    </li>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>김다우 대리</label
+                      >
+                    </li>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>마정운 대리</label
+                      >
+                    </li>
+                    <li>
+                      <label class="lastTree"
+                        ><i class="bi bi-file-person"></i>서하윤 대리</label
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container" id="container">
+        <header>
+          <h1>급여 지급결의서</h1>
+        </header>
+        <div class="details-wrap">
+          <div class="details">
+            <table>
+              <tr>
+                <th>기안자</th>
+                <td>김민석</td>
+              </tr>
+              <tr>
+                <th>소속</th>
+                <td>영업팀</td>
+              </tr>
+              <tr>
+                <th>기안일</th>
+                <td id="createDate">2024-07-24</td>
+              </tr>
+              <tr>
+                <th>문서번호</th>
+                <td id="createDocument">30245</td>
+              </tr>
+            </table>
+          </div>
+          <div class="singnature-wrap" style="display: flex">
+            <table class="signature-table" id="add-signature-table">
+              <!-- <tr>
+                <th rowspan="2" class="side-cell">승인</th>
+                <td class="main-cell"></td>
+              </tr> -->
+            </table>
+            <table class="signature-table">
+              <tr>
+                <th rowspan="2" class="side-cell">신청</th>
+                <td>이사</td>
+              </tr>
+              <tr>
+                <td>황철원</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="payment-details">
+          <p>▣ 급여 지급과 관련하여 아래와 같이 요청합니다.</p>
+          <p>1. 근무월: 2024-07</p>
+          <br />
+          <p>2. 지급예정일: <span id="scheduledDate">2024-08-10</span></p>
+          <br />
+          <p>3. 지급인원: <span id="createTotalPeople">15</span>명</p>
+          <br />
+          <p>4. 지급금액: <span id="total-payment-amount"></span>원</p>
+          <br />
+          <p>5. 지급상세:</p>
+          <table>
+            <tr class="table-header">
+              <thead>
+                <th>항목명</th>
+                <th>과세금액</th>
+                <th>비과세금액</th>
+              </thead>
+            </tr>
+            <tbody id="table-body">
+              <tr>
+                <td>기본급</td>
+                <td><span id="salary">0</span></td>
+                <td><span>0</span></td>
+              </tr>
+              <tr>
+                <td>연장근로수당</td>
+                <td><span id="overtimePay">0</span></td>
+                <td><span>0</span></td>
+              </tr>
+              <tr>
+                <td>야간근로수당</td>
+                <td><span id="nightWorkAllowance">0</span></td>
+                <td><span>0</span></td>
+              </tr>
+              <tr>
+                <td>식대</td>
+                <td><span>0</span></td>
+                <td><span id="foodExpenses">0</span></td>
+              </tr>
+              <tr>
+                <td>차량지원금</td>
+                <td><span>0</span></td>
+                <td><span id="vehicleSupportExpenses">0</span></td>
+              </tr>
+              <tr>
+                <td>육아수당</td>
+                <td><span>0</span></td>
+                <td><span id="childcareAllowance">0</span></td>
+              </tr>
+              <tr>
+                <td>명절상여금</td>
+                <td><span>0</span></td>
+                <td><span id="holidayBonus">0</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="sum-result">
+                <td><b>합계</b></td>
+                <td><b id="total-tax">0</b></td>
+                <td><b id="total-non-tax">0</b></td>
+              </tr>
+              <tr>
+                <td><b>총계</b></td>
+                <td><b></b></td>
+                <td><b id="total-all">0</b></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="deduction-details">
+          <p>6. 공제상세:</p>
+          <table>
+            <tr>
+              <th>항목명</th>
+              <th>공제금액</th>
+            </tr>
+            <tr>
+              <td>근로소득세</td>
+              <td><span id="earnedIncomeTax">0</span></td>
+            </tr>
+            <tr>
+              <td>근로지방소득세</td>
+              <td><span id="earnedLocalIncomeTax">0</span></td>
+            </tr>
+            <tr>
+              <td>국민연금</td>
+              <td><span id="nationalPension">0</span></td>
+            </tr>
+            <tr>
+              <td>건강보험</td>
+              <td><span id="healthInsurance">0</span></td>
+            </tr>
+            <tr>
+              <td>장기요양보험</td>
+              <td><span id="longTermCareInsurance">0</span></td>
+            </tr>
+            <tr>
+              <td>고용보험</td>
+              <td><span id="employmentInsurance">0</span></td>
+            </tr>
+            <tr>
+              <td>학자금상환</td>
+              <td><span id="repaymentOfStudentLoans">0</span></td>
+            </tr>
+            <tr class="sum-result">
+              <td><b>합계</b></td>
+              <td><b id="total-deduction"></b></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="approver-image-wrap">
+        <div class="approver-info">
+          <p>결재선</p>
+          <p>문서정보</p>
+        </div>
+        <div class="approver-detail-wrap">
+          <div class="approver-side"></div>
+          <div class="image-name-wrap">
+            <img
+              class="approver-detail-image"
+              src="../../../public/images/admin1-profile.jpeg"
+              alt="철워니형"
+            />
+            <p>개발팀</p>
+            <p class="approver-name">황철원</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="paycheck-resolution.js"></script>
   </body>
 </html>
