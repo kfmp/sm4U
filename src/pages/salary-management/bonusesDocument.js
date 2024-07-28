@@ -222,6 +222,8 @@ $(function () {
         resultsContainer.empty();
 
         if (input) {
+            console.log(allEmployees);
+            console.log(input);
             // 이름 필드에서 입력값을 포함하는 사원을 필터링
             const filteredData = allEmployees.filter(employee => employee.name.toLowerCase().includes(input));
             if (filteredData.length) {
@@ -245,10 +247,60 @@ $(function () {
 
     // 조회 버튼 클릭 이벤트
     $('.btn-search').on('click', function () {
-        var searchQuery = $('#departments').val().toLowerCase();
-        var filteredEmployees = allEmployees.filter(employee => employee.name.toLowerCase().includes(searchQuery));
+        var searchQuery = $('#departments').val();
+        var filteredEmployees = allEmployees.filter(employee => employee.name.includes(searchQuery));
         updateEmployeeTable(filteredEmployees);
     });
+    // $('#saveData').on('click', function () {
+    //     var employeesData = [];
+    //     $('#tableBody tr').each(function () {
+    //         var row = $(this);
+    //         var employee = {
+    //             id: row.find('input[type="checkbox"]').val(),
+    //             name: row.find('td:nth-child(3)').text(),
+    //             departments: row.find('td:nth-child(4)').text(),
+    //             position: row.find('td:nth-child(5)').text(),
+    //             hrieDate: row.find('td:nth-child(6)').text(),
+    //             moneyMaybe: row.find('td:nth-child(7)').text(),
+    //             moneyGood: parseFloat(row.find('td:nth-child(8)').text().replace(/[^\d.-]/g, '')),
+    //             moneyBye: parseFloat(row.find('td:nth-child(9)').text().replace(/[^\d.-]/g, '')),
+    //             realMoney: parseFloat(row.find('td:nth-child(10)').text().replace(/[^\d.-]/g, ''))
+    //         };
+    //         employeesData.push(employee);
+    //     });
+
+    //     saveEmployeesData(employeesData); // 데이터 저장 함수 호출
+    // });
+
+    // function saveEmployeesData(data) {
+    //     data.forEach(employee => {
+    //         console.log(`Sending PATCH request to: http://localhost:3000/bonuses/${employee.id}`);
+    //         $.ajax({
+    //             url: `http://localhost:3000/bonuses/${employee.id}`,
+    //             type: 'PATCH',
+    //             contentType: 'application/json',
+    //             data: JSON.stringify({
+    //                 name: employee.name,
+    //                 departments: employee.departments,
+    //                 position: employee.position,
+    //                 hrieDate: employee.hrieDate,
+    //                 moneyMaybe: employee.moneyMaybe,
+    //                 moneyGood: employee.moneyGood,
+    //                 moneyBye: employee.moneyBye,
+    //                 realMoney: employee.realMoney
+    //             }),
+    //             success: function (response) {
+    //                 console.log(`Updated employee ${employee.id}:`, response);
+    //             },
+    //             error: function (error) {
+    //                 console.error(`Error updating employee ${employee.id}:`, error);
+    //             }
+    //         });
+    //     });
+
+
+    //     alert('업데이트 요청이 완료되었습니다. 콘솔 로그를 확인하세요.');
+    // }
 
 
 
