@@ -82,7 +82,7 @@ $(function () {
         var employee = allEmployees.find(emp => emp.id === employeeId.toString());
 
         if (employee) {
-            console.table(employee); // 디버깅을 위해 콘솔에 직원 정보 출력
+
             $('#employeeDetailsModalLabel').text(employee.name + '의 상세 정보'); // 모달 타이틀 설정
             // 필드 설정
             $('#classification').val(employee.classification);
