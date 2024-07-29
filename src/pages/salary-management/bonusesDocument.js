@@ -152,7 +152,18 @@ $(function () {
 
 
                 //console.log(cell);
-                // 날짜 처리 'n' 타입이면서 'w' 로 올때가 있음 세상 어지럽다
+                /*
+                t: 's', // 셀 데이터 타입 (s: string, n: number, b: boolean, d: date, e: error, z: stub)
+                v: 'Cell Value', // 셀의 실제 값
+                w: 'Formatted Value', // 셀의 서식이 적용된 값 (일부 셀에만 존재)
+                f: 'Formula', // 셀에 입력된 수식 (일부 셀에만 존재)
+                r: '<xml>...</xml>', // 리치 텍스트 형식의 값 (일부 셀에만 존재)
+                h: 'HTML', // HTML 형식의 값 (일부 셀에만 존재)
+                c: [ {a: 'Author', t: 'Comment'} ], // 셀 주석 (일부 셀에만 존재)
+                z: 'Number Format', // 숫자 서식 (일부 셀에만 존재)
+                l: { Target: 'url', Tooltip: 'tooltip' }, // 하이퍼링크 (일부 셀에만 존재)
+                s: {} // 스타일 정보 (일부 셀에만 존재)
+                */
                 if (cell && cell.t === 'n' && (cell.w && /(\d{1,2}\/\d{1,2}\/\d{2,4})/.test(cell.w))) {
                     let dateValue = XLSX.SSF.parse_date_code(cell.v);
                     cellValue = `${dateValue.y}-${String(dateValue.m).padStart(2, '0')}-${String(dateValue.d).padStart(2, '0')}`;
@@ -162,7 +173,7 @@ $(function () {
 
                 // 금액 처리
                 if ([6, 7, 8].includes(C) && typeof cellValue === 'string') {
-                    // 정규표현식을 사용하여 모든 비숫자 문자 제거
+                    // 정규표현식을 사용하여 모든 비숫자 문자 제거 통화식등
                     cellValue = parseFloat(cellValue.replace(/[^\d.-]/g, '')) || 0;
                 }
 

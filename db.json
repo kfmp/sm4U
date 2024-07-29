@@ -130,8 +130,8 @@
       "position": "사원",
       "hrieDate": "2023-07-11",
       "endDate": null,
-      "annualSalary": 33000000,
-      "salary": 2100000,
+      "annualSalary": null,
+      "salary": null,
       "bank": "국민은행",
       "bankcount": "1234-56789",
       "numberOfChildren": 2,
@@ -717,6 +717,80 @@
       "name": "특별소득공제",
       "price": 0,
       "isUsed": false
+    }
+  ],
+  "paymentItems": [
+    {
+      "id": "1",
+      "name": "기본급",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": true
+    },
+    {
+      "id": "2",
+      "name": "연장근로수당",
+      "fixedAllowance": true,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": false
+    },
+    {
+      "id": "3",
+      "name": "야간근로수당",
+      "fixedAllowance": true,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": false
+    },
+    {
+      "id": "4",
+      "name": "주휴수당",
+      "fixedAllowance": false,
+      "amount": 0,
+      "taxFree": false,
+      "taxFreeLimit": null,
+      "isUsed": false
+    },
+    {
+      "id": "5",
+      "name": "차량지원금",
+      "fixedAllowance": false,
+      "amount": 200000,
+      "taxFree": true,
+      "taxFreeLimit": 200000,
+      "isUsed": true
+    },
+    {
+      "id": "6",
+      "name": "식대",
+      "fixedAllowance": false,
+      "amount": 200000,
+      "taxFree": true,
+      "taxFreeLimit": 200000,
+      "isUsed": true
+    },
+    {
+      "id": "7",
+      "name": "육아수당",
+      "fixedAllowance": false,
+      "amount": 200000,
+      "taxFree": true,
+      "taxFreeLimit": 200000,
+      "isUsed": true
+    },
+    {
+      "id": "8",
+      "name": "자격수당",
+      "fixedAllowance": false,
+      "amount": 200000,
+      "taxFree": true,
+      "taxFreeLimit": 200000,
+      "isUsed": true
     }
   ]
 }
