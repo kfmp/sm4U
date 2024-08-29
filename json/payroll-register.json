@@ -1,79 +1,43 @@
 {
-    "payrollRegister": [
-        {
-    "annualSalary" : 45000000,
-    "bank" : null,
-    "bankcount": null,
-    "byeAccount": null,
-    "childcareAllowance": 100000,
-    "departments": "개발부",
-    "dorunorlHireReductionRate": null,
-    "dorunorlNationalReductionRate": null,
-    "earnedIncomeTax": 100000,
-    "earnedLocalIncomeTax": 100000,
-    "employmentInsurance": 100000,
-    "endDate": null,
-    "foodExpenses": 100000,
-    "healthInsurance": 100000,
-    "holidayBonus": 100000,
-    "hrieDate": "2023-07-11",
-    "id": 1000,
-    "longTermCareInsurance": 100000,
-    "name": "김상학",
-    "nationalPension": 100000,
-    "nightWorkAllowance": 100000,
-    "numberOfChildren": null,
-    "overtimePay": 100000,
-    "paymentAmount": 3000000,
-    "position": "사원",
-    "repaymentOfStudentLoans": 100000,
-    "salary": 3200000,
-    "scheduledPaymentDate": "2024-08-20",
-    "smallBusinessReductionRate": null,
-    "tenure": "재직",
-    "totalDeduction": 700000,
-    "totalPayment": 3700000,
-    "unPaymentAmount": 3000000,
-    "vehicleSupportExpenses": 100000
-},
-{
-    "annualSalary" : 45000000,
-    "bank" : null,
-    "bankcount": null,
-    "byeAccount": null,
-    "childcareAllowance": 100000,
-    "departments": "개발부",
-    "dorunorlHireReductionRate": null,
-    "dorunorlNationalReductionRate": null,
-    "earnedIncomeTax": 100000,
-    "earnedLocalIncomeTax": 100000,
-    "employmentInsurance": 100000,
-    "endDate": null,
-    "foodExpenses": 100000,
-    "healthInsurance": 100000,
-    "holidayBonus": 100000,
-    "hrieDate": "2023-07-11",
-    "id": 1000,
-    "longTermCareInsurance": 100000,
-    "name": "김상학",
-    "nationalPension": 100000,
-    "nightWorkAllowance": 100000,
-    "numberOfChildren": null,
-    "overtimePay": 100000,
-    "paymentAmount": 3000000,
-    "position": "사원",
-    "repaymentOfStudentLoans": 100000,
-    "salary": 3200000,
-    "scheduledPaymentDate": "2024-08-20",
-    "smallBusinessReductionRate": null,
-    "tenure": "재직",
-    "totalDeduction": 700000,
-    "totalPayment": 3700000,
-    "unPaymentAmount": 3000000,
-    "vehicleSupportExpenses": 100000
-}
-],
-"payroll": [
+  "payrollRegister": [
+    {
+      "annualSalary": 45000000,
+      "bank": null,
+      "bankcount": null,
+      "byeAccount": null,
+      "childcareAllowance": 100000,
+      "departments": "개발부",
+      "dorunorlHireReductionRate": null,
+      "dorunorlNationalReductionRate": null,
+      "earnedIncomeTax": 100000,
+      "earnedLocalIncomeTax": 100000,
+      "employmentInsurance": 100000,
+      "endDate": null,
+      "foodExpenses": 100000,
+      "healthInsurance": 100000,
+      "holidayBonus": 100000,
+      "hrieDate": "2023-07-11",
+      "id": 1000,
+      "longTermCareInsurance": 100000,
+      "name": "김상학",
+      "nationalPension": 100000,
+      "nightWorkAllowance": 100000,
+      "numberOfChildren": null,
+      "overtimePay": 100000,
+      "paymentAmount": 3000000,
+      "position": "사원",
+      "repaymentOfStudentLoans": 100000,
+      "salary": 3200000,
+      "scheduledPaymentDate": "2024-08-20",
+      "smallBusinessReductionRate": null,
+      "tenure": "재직",
+      "totalDeduction": 700000,
+      "totalPayment": 3700000,
+      "unPaymentAmount": 3000000,
+      "vehicleSupportExpenses": 100000
+    }
+  ],
+  "payroll": [
     {
       "id": 1,
       "createdDate": "2020-01-10",
@@ -987,232 +951,232 @@
       ]
     },
     {
-        "id": 49,
-        "createdDate": "2024-01-10",
-        "employees": [
-          {
-            "id": 1048,
-            "status": "이체완료",
-            "name": "김영호",
-            "departments": "기획부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-01-20",
-            "totalPayment": 4700000,
-            "totalDeduction": 851700,
-            "paymentAmount": 5148300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 50,
-        "createdDate": "2024-02-10",
-        "employees": [
-          {
-            "id": 1049,
-            "status": "이체완료",
-            "name": "박지수",
-            "departments": "인사부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-02-20",
-            "totalPayment": 4600000,
-            "totalDeduction": 851700,
-            "paymentAmount": 4048300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 51,
-        "createdDate": "2024-03-10",
-        "employees": [
-          {
-            "id": 1050,
-            "status": "이체완료",
-            "name": "최민수",
-            "departments": "개발부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-03-20",
-            "totalPayment": 4500000,
-            "totalDeduction": 851700,
-            "paymentAmount": 3948300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 52,
-        "createdDate": "2024-04-10",
-        "employees": [
-          {
-            "id": 1051,
-            "status": "이체완료",
-            "name": "박철수",
-            "departments": "영업부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-04-20",
-            "totalPayment": 4900000,
-            "totalDeduction": 851700,
-            "paymentAmount": 4048300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 53,
-        "createdDate": "2024-05-10",
-        "employees": [
-          {
-            "id": 1052,
-            "status": "이체완료",
-            "name": "이영희",
-            "departments": "마케팅부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-05-20",
-            "totalPayment": 4800000,
-            "totalDeduction": 851700,
-            "paymentAmount": 4948300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 54,
-        "createdDate": "2024-06-10",
-        "employees": [
-          {
-            "id": 1053,
-            "status": "이체완료",
-            "name": "김희준",
-            "departments": "기획부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-06-20",
-            "totalPayment": 4700000,
-            "totalDeduction": 851700,
-            "paymentAmount": 3848300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 55,
-        "createdDate": "2024-07-10",
-        "employees": [
-          {
-            "id": 1054,
-            "status": "이체완료",
-            "name": "장민호",
-            "departments": "인사부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-07-20",
-            "totalPayment": 4600000,
-            "totalDeduction": 851700,
-            "paymentAmount": 3748300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 56,
-        "createdDate": "2024-08-10",
-        "employees": [
-          {
-            "id": 1055,
-            "status": "이체완료",
-            "name": "홍길동",
-            "departments": "개발부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-08-20",
-            "totalPayment": 4500000,
-            "totalDeduction": 851700,
-            "paymentAmount": 4448300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 57,
-        "createdDate": "2024-09-10",
-        "employees": [
-          {
-            "id": 1056,
-            "status": "이체완료",
-            "name": "박영수",
-            "departments": "영업부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-09-20",
-            "totalPayment": 4900000,
-            "totalDeduction": 851700,
-            "paymentAmount": 4648300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 58,
-        "createdDate": "2024-10-10",
-        "employees": [
-          {
-            "id": 1057,
-            "status": "이체완료",
-            "name": "최성훈",
-            "departments": "마케팅부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-10-20",
-            "totalPayment": 4800000,
-            "totalDeduction": 851700,
-            "paymentAmount": 3948300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 59,
-        "createdDate": "2024-11-10",
-        "employees": [
-          {
-            "id": 1058,
-            "status": "이체완료",
-            "name": "정민수",
-            "departments": "기획부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-11-20",
-            "totalPayment": 4700000,
-            "totalDeduction": 851700,
-            "paymentAmount": 4548300,
-            "unPaymentAmount": 0
-          }
-        ]
-      },
-      {
-        "id": 60,
-        "createdDate": "2024-12-10",
-        "employees": [
-          {
-            "id": 1059,
-            "status": "이체완료",
-            "name": "최지훈",
-            "departments": "인사부",
-            "position": "사원",
-            "hrieDate": "2022-07-11",
-            "scheduledPaymentDate": "2024-12-20",
-            "totalPayment": 4600000,
-            "totalDeduction": 851700,
-            "paymentAmount": 5012300,
-            "unPaymentAmount": 0
-          }
-        ]
-      }
+      "id": 49,
+      "createdDate": "2024-01-10",
+      "employees": [
+        {
+          "id": 1048,
+          "status": "이체완료",
+          "name": "김영호",
+          "departments": "기획부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-01-20",
+          "totalPayment": 4700000,
+          "totalDeduction": 851700,
+          "paymentAmount": 5148300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "createdDate": "2024-02-10",
+      "employees": [
+        {
+          "id": 1049,
+          "status": "이체완료",
+          "name": "박지수",
+          "departments": "인사부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-02-20",
+          "totalPayment": 4600000,
+          "totalDeduction": 851700,
+          "paymentAmount": 4048300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "createdDate": "2024-03-10",
+      "employees": [
+        {
+          "id": 1050,
+          "status": "이체완료",
+          "name": "최민수",
+          "departments": "개발부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-03-20",
+          "totalPayment": 4500000,
+          "totalDeduction": 851700,
+          "paymentAmount": 3948300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "createdDate": "2024-04-10",
+      "employees": [
+        {
+          "id": 1051,
+          "status": "이체완료",
+          "name": "박철수",
+          "departments": "영업부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-04-20",
+          "totalPayment": 4900000,
+          "totalDeduction": 851700,
+          "paymentAmount": 4048300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "createdDate": "2024-05-10",
+      "employees": [
+        {
+          "id": 1052,
+          "status": "이체완료",
+          "name": "이영희",
+          "departments": "마케팅부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-05-20",
+          "totalPayment": 4800000,
+          "totalDeduction": 851700,
+          "paymentAmount": 4948300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "createdDate": "2024-06-10",
+      "employees": [
+        {
+          "id": 1053,
+          "status": "이체완료",
+          "name": "김희준",
+          "departments": "기획부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-06-20",
+          "totalPayment": 4700000,
+          "totalDeduction": 851700,
+          "paymentAmount": 3848300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "createdDate": "2024-07-10",
+      "employees": [
+        {
+          "id": 1054,
+          "status": "이체완료",
+          "name": "장민호",
+          "departments": "인사부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-07-20",
+          "totalPayment": 4600000,
+          "totalDeduction": 851700,
+          "paymentAmount": 3748300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "createdDate": "2024-08-10",
+      "employees": [
+        {
+          "id": 1055,
+          "status": "이체완료",
+          "name": "홍길동",
+          "departments": "개발부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-08-20",
+          "totalPayment": 4500000,
+          "totalDeduction": 851700,
+          "paymentAmount": 4448300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "createdDate": "2024-09-10",
+      "employees": [
+        {
+          "id": 1056,
+          "status": "이체완료",
+          "name": "박영수",
+          "departments": "영업부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-09-20",
+          "totalPayment": 4900000,
+          "totalDeduction": 851700,
+          "paymentAmount": 4648300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "createdDate": "2024-10-10",
+      "employees": [
+        {
+          "id": 1057,
+          "status": "이체완료",
+          "name": "최성훈",
+          "departments": "마케팅부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-10-20",
+          "totalPayment": 4800000,
+          "totalDeduction": 851700,
+          "paymentAmount": 3948300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "createdDate": "2024-11-10",
+      "employees": [
+        {
+          "id": 1058,
+          "status": "이체완료",
+          "name": "정민수",
+          "departments": "기획부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-11-20",
+          "totalPayment": 4700000,
+          "totalDeduction": 851700,
+          "paymentAmount": 4548300,
+          "unPaymentAmount": 0
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "createdDate": "2024-12-10",
+      "employees": [
+        {
+          "id": 1059,
+          "status": "이체완료",
+          "name": "최지훈",
+          "departments": "인사부",
+          "position": "사원",
+          "hrieDate": "2022-07-11",
+          "scheduledPaymentDate": "2024-12-20",
+          "totalPayment": 4600000,
+          "totalDeduction": 851700,
+          "paymentAmount": 5012300,
+          "unPaymentAmount": 0
+        }
+      ]
+    }
   ]
 }
